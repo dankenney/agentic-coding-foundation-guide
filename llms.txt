@@ -1,0 +1,25 @@
+# Agentic Coding Foundation
+
+> Practical guidance for people and agents doing useful coding work. Read selectively; verify product behavior against the dated primary sources.
+
+## Start
+- [Agent entry](guide/agent-entry.md): Guided application, boundaries, and routing.
+- [First task](guide/first-task.md): A beginner's first useful change.
+- [Supplied practice task](examples/practice-task.md): Report fixtures, independent expected CSVs, and error/rerun cases for readers without a project.
+- [Working loop](guide/workflow.md): Brief, inspect, change, verify, hand off.
+
+## Practice
+- [Context](guide/context.md): Instructions, evidence, and task state.
+- [Verification](guide/verification.md): Actual behavior and evidence.
+- [Recovery](guide/recovery.md): Diagnosis, undo, and resuming work.
+- [Team practice](guide/team-practice.md): Ownership, review, and shared learning.
+- [Advanced practice](guide/advanced.md): Skills, tools, delegation, and budgets.
+- [Platform notes](guide/platforms.md): Dated operating differences.
+- [Worked task](examples/worked-task.md): A synthetic workplace example.
+- [Templates](templates/README.md): Briefs, instructions, handoffs, and lessons.
+
+## Maintain
+- [Contributing](CONTRIBUTING.md): Editorial and validation requirements.
+- [Maintenance](maintenance/README.md): Weekly research and human decisions.
+- [Sources](maintenance/sources.md): Claim support and research limits.
+- [Learner scenarios](maintenance/learner-scenarios.md): Behavior checks for guide contributors; use after relevant teaching changes.

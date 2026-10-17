@@ -1,0 +1,316 @@
+{
+  "checked_on": "2026-10-17",
+  "sources": [
+    {
+      "id": "openai-practice",
+      "title": "Best practices",
+      "url": "https://learn.chatgpt.com/guides/best-practices",
+      "kind": "official product guidance",
+      "review_after_days": 14,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/workflow.md",
+        "maintenance/editorial-decisions.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Goal, context, constraints, and completion conditions.",
+      "limits": "Product guidance; no comparative proof of productivity."
+    },
+    {
+      "id": "openai-instructions",
+      "title": "Custom instructions with AGENTS.md",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Codex instruction discovery, overrides, scope, and limits.",
+      "limits": "Discovery depends on working directory and configuration."
+    },
+    {
+      "id": "openai-authority",
+      "title": "Agent approvals and security",
+      "url": "https://learn.chatgpt.com/docs/agent-approvals-security",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Sandbox restrictions and approvals are separate controls.",
+      "limits": "Actual platform, network, and managed policy matter."
+    },
+    {
+      "id": "openai-instruction-review",
+      "title": "Rethinking skills and prompts for GPT-6 Astra",
+      "url": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+      "kind": "vendor engineering publication",
+      "review_after_days": 30,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/context.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Remove excess mandatory reading and ambiguous skill triggers.",
+      "limits": "Model-specific observations do not establish universal behavior."
+    },
+    {
+      "id": "openai-skills",
+      "title": "Skills: plugin concepts",
+      "url": "https://developers.openai.com/plugins/concepts/skills",
+      "kind": "official product documentation",
+      "review_after_days": 14,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/advanced.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Skills organize repeatable workflows around tools.",
+      "limits": "Do not infer identical discovery/execution across platforms."
+    },
+    {
+      "id": "cursor-rules",
+      "title": "Cursor Rules",
+      "url": "https://cursor.com/docs/rules",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Root/nested instructions, native rule formats, and referenced files.",
+      "limits": "Precedence and activation can change; check team settings."
+    },
+    {
+      "id": "cursor-execution",
+      "title": "Cursor Run Modes",
+      "url": "https://cursor.com/docs/agent/security/run-modes",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Local execution modes, approval/sandbox separation, cloud distinction.",
+      "limits": "Specific current page used over older adjacent approval terminology."
+    },
+    {
+      "id": "cursor-security",
+      "title": "Cursor Agent security",
+      "url": "https://cursor.com/docs/agent/security",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Immediate file writes and auto-reload execution risk.",
+      "limits": "Guardrails are not complete containment; defaults may differ."
+    },
+    {
+      "id": "cursor-browser",
+      "title": "Cursor Browser",
+      "url": "https://cursor.com/docs/agent/tools/browser",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Browser interactions and persistent cookies/storage.",
+      "limits": "Read for capabilities/state; current execution policy comes from Run Modes."
+    },
+    {
+      "id": "cursor-checkpoints",
+      "title": "Cursor checkpoints",
+      "url": "https://cursor.com/docs/agent/overview#checkpoints",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "File-only restore, retained chat, local state separate from Git.",
+      "limits": "No evidence of external-system or database rollback."
+    },
+    {
+      "id": "replit-instructions",
+      "title": "Replit project instructions",
+      "url": "https://docs.replit.com/features/project-setup/replit-dot-md",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Root replit.md discovery, agent updates, size limits.",
+      "limits": "No automatic cross-tool equivalence or nested discovery implied."
+    },
+    {
+      "id": "replit-testing",
+      "title": "Replit App Testing",
+      "url": "https://docs.replit.com/features/agent/app-testing",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Selective test execution, supported apps, modes, login obstacles.",
+      "limits": "Enabled does not mean executed or sufficient coverage."
+    },
+    {
+      "id": "replit-recovery",
+      "title": "Replit checkpoints and rollbacks",
+      "url": "https://docs.replit.com/features/version-control/checkpoints-and-rollbacks",
+      "kind": "official product documentation",
+      "review_after_days": 7,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Checkpoint scope and database restoration exceptions.",
+      "limits": "Development and production data have distinct recovery paths."
+    },
+    {
+      "id": "anthropic-context",
+      "title": "Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "kind": "vendor engineering publication",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/context.md",
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Selective retrieval and durable state across longer work.",
+      "limits": "Engineering guidance; no universal optimal context size."
+    },
+    {
+      "id": "anthropic-evals",
+      "title": "Demystifying evals for AI agents",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "kind": "vendor engineering publication",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/verification.md",
+        "guide/platforms.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Final outcomes versus claims; regression versus capability evaluations.",
+      "limits": "Adapt evaluation discipline proportionately for users of agents."
+    },
+    {
+      "id": "anthropic-tools",
+      "title": "Writing effective tools for agents — with agents",
+      "url": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+      "kind": "vendor engineering publication",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/advanced.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Distinct tool contracts, relevant outputs, realistic evaluations.",
+      "limits": "Not evidence that a particular connector is safe."
+    },
+    {
+      "id": "anthropic-infrastructure",
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "kind": "primary vendor experiment",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/advanced.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Resource settings can change benchmark outcomes.",
+      "limits": "Specific experimental setups; not a general workplace productivity estimate."
+    },
+    {
+      "id": "dora-2025",
+      "title": "DORA 2025 State of AI-assisted Software Development Report: abstract",
+      "url": "https://research.google/pubs/dora-2025-state-of-ai-assisted-software-development-report/",
+      "kind": "primary research abstract",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/team-practice.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Organizational context matters for AI-assisted work.",
+      "limits": "Only abstract used here; observational framing is not a local causal forecast."
+    },
+    {
+      "id": "metr-experiment-2026",
+      "title": "METR productivity experiment design update",
+      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+      "kind": "primary research update",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/team-practice.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Selection effects and time-measurement problems limit productivity estimates.",
+      "limits": "An update explaining uncertainty, not a current universal speedup."
+    },
+    {
+      "id": "metr-survey-2026",
+      "title": "METR self-reported productivity survey",
+      "url": "https://metr.org/blog/2026-05-11-ai-usage-survey/",
+      "kind": "primary survey research",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/team-practice.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Distinguish perceived speed and value; self-report and sampling limits.",
+      "limits": "Convenience sample and reported perceptions are not causal effects."
+    },
+    {
+      "id": "agents-format",
+      "title": "AGENTS.md",
+      "url": "https://agents.md/",
+      "kind": "primary format documentation",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "maintenance/editorial-decisions.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Comparison: instruction format as a documentation scope.",
+      "limits": "Not a guarantee every product discovers the file."
+    },
+    {
+      "id": "microsoft-course",
+      "title": "AI Agents for Beginners",
+      "url": "https://github.com/microsoft/ai-agents-for-beginners",
+      "kind": "primary project documentation",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "maintenance/editorial-decisions.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Comparison: course on building agent systems through lessons and code.",
+      "limits": "Selected scope comparison, not an exhaustive competitive ranking."
+    }
+  ]
+}

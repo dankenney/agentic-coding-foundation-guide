@@ -1,0 +1,10 @@
+Operations request summary
+
+[Printed page 1]
+North: 14 requests
+
+[Printed page 2]
+South: 8 requests
+
+[Printed page 3]
+East: not reported
