@@ -63,4 +63,6 @@ python scripts/check_guide.py
 python -m unittest discover -s tests -v
 ```
 
+The guide and scripts are available under the [MIT License](LICENSE).
+
 Editorial baseline: **2026-10-17**. A source's verification date records when it was read; it does not guarantee that a product is unchanged today.
