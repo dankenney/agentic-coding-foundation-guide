@@ -285,6 +285,48 @@
       "limits": "Convenience sample and reported perceptions are not causal effects."
     },
     {
+      "id": "dlai-skills-map",
+      "title": "DeepLearning.AI: The AI Engineering Skills Map",
+      "url": "https://www.linkedin.com/pulse/ai-engineering-skills-map-andrew-ng-m479c/",
+      "kind": "primary author educational framework",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/first-task.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Optional learning compass connecting agent use, software fundamentals and product judgment.",
+      "limits": "Author's publication of the framework; exercises are our adaptation, not a validated proficiency rubric or required curriculum."
+    },
+    {
+      "id": "dlai-software-fundamentals",
+      "title": "AI Engineering Skills Map: Software engineering fundamentals",
+      "url": "https://www.linkedin.com/pulse/ai-engineering-skills-map-software-fundamentals-andrew-ng-7lnac/",
+      "kind": "primary author educational guidance",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/first-task.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Software and data understanding help people recognize and steer architectural tradeoffs.",
+      "limits": "Educational guidance; tracing and tradeoff exercises are our synthesis, not comparative productivity evidence."
+    },
+    {
+      "id": "dlai-shaping-build",
+      "title": "AI Engineering Skills Map: Shaping the build",
+      "url": "https://www.linkedin.com/pulse/ai-engineering-skills-map-shaping-build-andrew-ng-td7uc/",
+      "kind": "primary author educational guidance",
+      "review_after_days": 90,
+      "last_verified": "2026-10-17",
+      "used_in": [
+        "guide/workflow.md",
+        "maintenance/sources.md"
+      ],
+      "supports": "Use user feedback and small experiments to choose what to build next and revise the scope.",
+      "limits": "Educational framing; our stop/change criteria are an applied recommendation and do not authorize user contact, deployment or production changes."
+    },
+    {
       "id": "agents-format",
       "title": "AGENTS.md",
       "url": "https://agents.md/",

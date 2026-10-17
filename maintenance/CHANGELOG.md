@@ -25,3 +25,8 @@
 - Put the no-project practice route before the navigation choices and linked chat-only readers directly to the short CSV walkthrough.
 - Made the authorized practice folder, file-fetch boundary, and available-language check explicit; removed unnecessary Git setup from the first exercise.
 - Added a direct route for an already scoped task and retained the chat-only scenario for future learner checks.
+
+## 2026-10-17 — Skills map guidance
+
+- Added bounded problem discovery, software judgment through a concrete data path, and optional next-practice choices within existing chapters.
+- Added three primary DeepLearning.AI skills-map sources to the weekly source registry, with claim scope and educational limits.

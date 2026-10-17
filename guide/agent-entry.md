@@ -19,6 +19,7 @@ If you cannot access this guide or their project, state the access gap. Ask for 
 | Reader's need | Read next | Evidence of progress |
 | --- | --- | --- |
 | First time, uncertain where to begin | [First task](first-task.md) | One concrete outcome and an inspected result |
+| Has a first result and wants to grow | [Next practice](first-task.md#choose-what-to-practice-next) | One small exercise tied to a real gap |
 | Wants better delegation | [Working loop](workflow.md) | A brief with observable acceptance criteria |
 | Agent misses project conventions | [Context](context.md) | Applicable instructions identified and checked |
 | Says a button or value does not work | [Recovery](recovery.md), then [verification](verification.md) | Reproduction and a reusable behavior check |
