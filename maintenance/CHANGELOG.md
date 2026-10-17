@@ -19,3 +19,9 @@
 
 - Added connection stop/revocation routes, resource budgets, and trials before unattended writes to existing chapters and the task brief.
 - Added optional learning through predictions and small experiments; strengthened the owner-ID example to favor structural fixes and regression evidence over repeated warnings.
+
+## 2026-10-17 — New teammate walkthrough
+
+- Put the no-project practice route before the navigation choices and linked chat-only readers directly to the short CSV walkthrough.
+- Made the authorized practice folder, file-fetch boundary, and available-language check explicit; removed unnecessary Git setup from the first exercise.
+- Added a direct route for an already scoped task and retained the chat-only scenario for future learner checks.

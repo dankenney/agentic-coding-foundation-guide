@@ -1,8 +1,8 @@
 # A first task with everything supplied
 
-**Use when:** you have a coding agent but no project yet. Build a small report-to-CSV converter in a separate disposable workspace. The inputs are made up, no accounts or network access are needed, and the result has a precise check.
+**Use when:** you have a coding agent but no project yet. Build a small report-to-CSV converter in a new empty folder outside this guide. The inputs are made up and the result has a precise check. Fetch the linked exercise files first; the program and checks then run offline without connected accounts.
 
-You need a tool that can read files and run a small program, or a teammate who can run it with you. Reading the exercise and drafting code without running it is preparation; report that limit.
+Your tool needs to create files and run a program, or a teammate can run it with you. Ask the agent to check which language is already available before choosing one. A chat-only tool can help with the [short CSV walkthrough](worked-task.md#document-to-csv-verify-each-extracted-value) and task brief; call that preparation, not a completed build.
 
 ## The job
 
@@ -17,11 +17,13 @@ The contract is deliberately small: columns `region,request_count,source_page`, 
 ## Give the agent this task
 
 ```text
-Use examples/practice-task.md in this guide. In a separate disposable
-workspace, build a small command-line converter with an input path and
-output path. Use an available language/runtime and its standard library.
-Keep the guide and fixtures unchanged; do not install packages or connect
-services. Read any instructions that apply to the target workspace.
+Use examples/practice-task.md in this guide. Work in this new empty
+folder outside the guide: [folder I authorize you to use]. Build a small
+command-line converter with an input path and output path. Use an already
+available language and its standard library. Fetch the linked exercise
+files before starting, then run offline. Keep the guide and fixtures
+unchanged; do not install packages or connect services. Read any
+instructions that apply to the target folder.
 
 Follow the contract and use the supplied reports as inputs. Refuse an
 existing output path so a rerun cannot silently replace earlier work.
@@ -31,7 +33,7 @@ Compare the actual CSV values against the independent expected files.
 Show exact commands, actual results, and any checks you could not run.
 ```
 
-If no runtime is available, choose an approved environment before treating the task as executable. Do not let the agent turn a setup gap into a package installation or a subscription decision without explaining what is needed.
+Replace the folder placeholder before sending. The exercise folder does not need its own Git repository; keep the inputs unchanged and save outputs under new names. If no language can run there, use the walkthrough or choose an approved environment before treating the task as executable. Explain a setup gap before proposing installations or a subscription.
 
 ## Inspect the result yourself
 

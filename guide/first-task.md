@@ -23,7 +23,7 @@ how to run it, which checks apply, and what is already changed. Don't
 change files yet. Explain unfamiliar terms briefly as they come up.
 ```
 
-Have it show the actual commands from the project instead of guessing. Confirm that the app or script currently runs. Preserve existing work and identify a recoverable starting point with the project's version control. A backup or checkpoint is useful only if you know what it restores.
+In an existing project, have it show the actual run commands instead of guessing and confirm that the app or script currently runs. Preserve existing work and identify a recoverable starting point with the project's version control. A backup or checkpoint is useful only if you know what it restores. In a new practice folder, start from the supplied inputs; there is no existing app to run or Git setup to complete first.
 
 Before trying buttons or entering data, confirm which backend the running copy uses. A local preview can still connect to production. Use disposable data and a test account where needed; pause an interaction if its effects are unclear. The [verification guide](verification.md#before-an-interaction-check) explains the setup.
 
@@ -58,4 +58,4 @@ If the result fails, say what happened with the exact steps and visible result. 
 
 Ask for a concise handoff: what changed, how to run it, checks and actual outcomes, remaining limits, and the next step. Use the team's normal review process before sharing or deploying it.
 
-You have completed the exercise when you can show the changed behavior, find the relevant diff, and repeat a check. Read [the working loop](workflow.md) next to make the process easier to repeat. The [worked task](../examples/worked-task.md) shows what a complete brief and review can look like.
+You have completed the exercise when you can show the result, find the changed files or diff, and repeat a check. Read [the working loop](workflow.md) next to make the process easier to repeat. The [worked task](../examples/worked-task.md) shows what a complete brief and review can look like.

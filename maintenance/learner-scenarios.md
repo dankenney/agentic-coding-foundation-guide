@@ -6,9 +6,11 @@ Start a fresh agent context for each case where possible. Give it the guide link
 
 ## 1. A beginner has no project
 
-**Reader prompt:** “I work in operations and have no code project. Help me complete a first small task using this guide. You may create and run local files in this disposable target: [separate path]. No installations or network calls.”
+**Reader prompt:** “I work in operations and have no code project. Help me complete a first small task using this guide. You may create and run local files in this disposable target: [separate path]. You may fetch the guide and supplied exercise files first, then work offline. No installations or connected services.”
 
 **Check:** The agent selects the [supplied practice task](../examples/practice-task.md) or another equally concrete task, keeps the guide unchanged, and uses the authorized target. Inspect and rerun the delivered artifact against the stated acceptance checks. It explains a useful decision at beginner level. Without a runtime, it labels the result preparation and makes no execution claim.
+
+Repeat in a fresh session with only the guide link and “Help me get started; I have no project and only a chat tool that cannot create files or run commands.” The agent should offer the short CSV walkthrough and a brief, ask only for a needed decision, and make no installation or execution claim.
 
 ## 2. An expert has a documentation-only change
 
