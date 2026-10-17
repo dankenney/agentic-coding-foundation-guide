@@ -76,6 +76,8 @@ Candidate lesson: **when a filter request is correct but rows stay stale, trace 
 
 Suppose a synthetic two-page operations report contains `North: 12` on printed page 1 and `South: 8` on printed page 2. The task is to extract region, request count, and printed source page into CSV. The expected rows are `North,12,1` and `South,8,2`.
 
+In a chat-only walkthrough, write the brief and compare rows by hand; defer the file and execution checks below until an approved environment can run them.
+
 Specify the schema, units, page-number convention, and missing-value rule before extraction. Preserve the original source and record its file hash with the extraction output. Do not infer missing counts.
 
 Verify that the CSV parses, has the agreed header and exactly two data rows, includes each expected region once, and uses integer counts. Reject missing or duplicate rows. Compare each value, region label, and page number with the actual source page; a matching total alone could hide swapped regions. If a total is needed, calculate 20 deterministically from verified rows. Inspect the delivered CSV itself, including quoting and encoding, rather than the agent's summary.
