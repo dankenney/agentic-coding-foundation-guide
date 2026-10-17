@@ -23,7 +23,7 @@ how to run it, which checks apply, and what is already changed. Don't
 change files yet. Explain unfamiliar terms briefly as they come up.
 ```
 
-Have it show the actual commands from the project instead of guessing. Confirm that the app or script currently runs. Preserve existing work and identify a recoverable starting point with the project's version control. A backup or checkpoint is useful only if you know what it restores.
+In an existing project, have it show the actual run commands instead of guessing and confirm that the app or script currently runs. Preserve existing work and identify a recoverable starting point with the project's version control. A backup or checkpoint is useful only if you know what it restores. In a new practice folder, start from the supplied inputs; there is no existing app to run or Git setup to complete first.
 
 Before trying buttons or entering data, confirm which backend the running copy uses. A local preview can still connect to production. Use disposable data and a test account where needed; pause an interaction if its effects are unclear. The [verification guide](verification.md#before-an-interaction-check) explains the setup.
 
@@ -48,7 +48,7 @@ Replace the example with your task. A useful brief names the result, constraints
 
 Try the user action yourself. Does the list change? Does reset restore the expected list? Is an empty result understandable? If persistence matters, refresh and check it. Ask the agent to open the changed files or diff and explain how the change causes the behavior you observed.
 
-Optionally, predict what a small example will do, try it with a few variations, and explain the behavior in your own words. Build toward harder problems as your understanding grows.
+Optionally, predict what a small example will do, then try a variation. Trace one value from input through any API (a service interface) and storage to the screen—or from source file to output for a script. Explain where it could become stale or who may access it; ask which reliability or cost tradeoff the design makes. This puts [software fundamentals](https://www.linkedin.com/pulse/ai-engineering-skills-map-software-fundamentals-andrew-ng-7lnac) to work on your task.
 
 You are looking for unintended changes as well as the requested result. Why did a new package appear? Why did a permission file change? You do not need to understand every line, but you should know what changed, how it was checked, and who can review what you cannot yet assess.
 
@@ -58,4 +58,14 @@ If the result fails, say what happened with the exact steps and visible result. 
 
 Ask for a concise handoff: what changed, how to run it, checks and actual outcomes, remaining limits, and the next step. Use the team's normal review process before sharing or deploying it.
 
-You have completed the exercise when you can show the changed behavior, find the relevant diff, and repeat a check. Read [the working loop](workflow.md) next to make the process easier to repeat. The [worked task](../examples/worked-task.md) shows what a complete brief and review can look like.
+You have completed the exercise when you can show the result, find the changed files or diff, and repeat a check. Read [the working loop](workflow.md) next to make the process easier to repeat. The [worked task](../examples/worked-task.md) shows what a complete brief and review can look like.
+
+## Choose what to practice next
+
+Use DeepLearning.AI's [AI Engineering Skills Map](https://www.linkedin.com/pulse/ai-engineering-skills-map-andrew-ng-m479c/) as an optional learning compass. These are our small exercises; choose one gap after your first result.
+
+| Gap | Next exercise |
+| --- | --- |
+| Unsure whether a feature helps | [Working loop](workflow.md#define-the-outcome): name one assumption and evidence that would stop the build. |
+| Cannot explain the data flow | [Recovery](recovery.md#follow-the-data-across-the-seam): trace one working value and explain what survives a refresh or rerun. |
+| Cannot judge “done” | [Verification](verification.md): derive one expected output from made-up input and compare the actual result. |

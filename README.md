@@ -8,6 +8,8 @@ An agent can read a project, propose an approach, change files, and run tools. Y
 
 ## Start where you are
 
+For a first try without a project, use the [supplied practice task](examples/practice-task.md): made-up reports, expected answers, and no connected accounts. If your tool cannot create files and run commands, start with the [short CSV walkthrough](examples/worked-task.md#document-to-csv-verify-each-extracted-value).
+
 | What you need today | Start here | What you will leave with |
 | --- | --- | --- |
 | Your first useful result | [First task](guide/first-task.md) | A small change you have checked yourself |
@@ -20,8 +22,6 @@ An agent can read a project, propose an approach, change files, and run tools. Y
 | Tool-specific differences | [Platform notes](guide/platforms.md) | The details to verify in your own environment |
 
 Read [one worked task](examples/worked-task.md) to see the brief, review, failure, and lesson fit together. Use the [templates](templates/README.md) when an empty page is slowing you down.
-
-No project yet? Try the [self-contained practice task](examples/practice-task.md): supplied report files, a tiny converter, and independent expected outputs. It needs no accounts or network access.
 
 ## Bring your agent
 

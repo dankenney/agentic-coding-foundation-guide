@@ -18,6 +18,8 @@ Describe a person, a job, and a visible result. “Improve the dashboard” leav
 
 Agree what must hold before calling the task done. Include the primary action, a meaningful failure or empty case, and any existing behavior that must survive. Decide what is explicitly outside scope. If you cannot explain why the change matters, spend the next few minutes on the problem rather than on code.
 
+When the need is uncertain, name the assumption to test. Observe the current workflow or try a small prototype within your authorized scope. Decide what feedback would change or stop the work: “If coordinators need reminders rather than exports, drop the export.” This adapts the product judgment and feedback loop in Andrew Ng's [Shaping the build](https://www.linkedin.com/pulse/ai-engineering-skills-map-shaping-build-andrew-ng-td7uc/).
+
 The [task brief](../templates/task-brief.md) is a starting aid. OpenAI's current [best-practice guidance](https://learn.chatgpt.com/guides/best-practices) similarly distinguishes goal, context, constraints, and completion conditions. That is useful structure, not a required incantation.
 
 ## Inspect before choosing the implementation

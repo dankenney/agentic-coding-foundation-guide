@@ -4,13 +4,13 @@ Use this file when someone gives you the repository link and asks to learn or im
 
 ## Begin with the task
 
-Use what the reader already told you. Ask only for missing information that changes the next step, preferably in one short exchange:
+Use what the reader already told you. For a clear task in an identified project, go straight to its instructions and relevant checks; skip introductory questions and templates unless something important is missing. Otherwise, ask only for information that changes the next step, preferably in one short exchange:
 
 - What would they like to build, change, or fix, and who needs it?
 - Do they have a project and a coding tool available? Can you actually read and run it?
 - How comfortable are they inspecting a diff and running a check?
 
-If they have no task or project, offer the [supplied report-to-CSV exercise](../examples/practice-task.md) in a separate disposable workspace, or a small change to an existing practice app. If no environment is available, help write a brief and walk through the [worked example](../examples/worked-task.md). Call that preparation, not a completed build.
+If they have no task or project, offer the [supplied report-to-CSV exercise](../examples/practice-task.md) in a new empty folder outside the guide, or a small change to an existing practice app. Establish whether their tool can create files and run a program, and where they authorize the work. If it cannot, walk through the [short CSV example](../examples/worked-task.md#document-to-csv-verify-each-extracted-value) and write a brief. Call that preparation, not a completed build.
 
 If you cannot access this guide or their project, state the access gap. Ask for an accessible copy or authorized connection. Do not invent repository contents or ask for secrets in chat. Do not clone, install, or modify anything merely because they asked to understand the guide.
 
@@ -19,6 +19,7 @@ If you cannot access this guide or their project, state the access gap. Ask for 
 | Reader's need | Read next | Evidence of progress |
 | --- | --- | --- |
 | First time, uncertain where to begin | [First task](first-task.md) | One concrete outcome and an inspected result |
+| Has a first result and wants to grow | [Next practice](first-task.md#choose-what-to-practice-next) | One small exercise tied to a real gap |
 | Wants better delegation | [Working loop](workflow.md) | A brief with observable acceptance criteria |
 | Agent misses project conventions | [Context](context.md) | Applicable instructions identified and checked |
 | Says a button or value does not work | [Recovery](recovery.md), then [verification](verification.md) | Reproduction and a reusable behavior check |
