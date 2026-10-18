@@ -12,11 +12,12 @@ Use this block for each change you'd recommend discussing:
 - **Proposal:** Name the page and provide the proposed diff, including removals.
 - **Provenance:** Link the public primary source and give its publication/update date, if known, and the date you checked it. Distinguish documented behavior, research findings, and our recommendation.
 - **Evidence and limits:** Say what was tested, what remains uncertain, and which platforms are affected.
+- **Editorial review:** Record complete or pending for the natural writing pass, private voice pass, and final comparison with the intended change and sources. Name the pages reviewed and any unfinished work. Keep private skill details out of the packet; an unfinished pass means the edit is pending.
 - **Decision:** Record adopt / trial / watch / reject, the reviewer, and the reason.
 
 ## Retirements
 
-List outdated or redundant guidance, explain why it should go, and provide the removal diff. Include a replacement or redirect where useful.
+List outdated or redundant guidance, explain why it should go, and provide the removal diff. Include a replacement or redirect where useful. Use the same editorial review record for removals and replacement wording.
 
 ## Private intake
 

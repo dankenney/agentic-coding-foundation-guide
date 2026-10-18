@@ -45,3 +45,8 @@
 
 - Reviewed every Markdown page with the natural writing editor and revised formulaic phrasing, abstract explanations, and repetitive formatting.
 - Rewrote guidance and template prompts in a more direct, conversational style while preserving technical requirements, examples, source qualifications, and commands.
+
+## 2026-10-18: Editing weekly proposals
+
+- Required the natural writing editor followed by a privately configured voice skill for every weekly proposal, with a final check that the edit preserves its meaning and source support.
+- Added completion records to the review packet. Candidates stay pending if either pass is unavailable or unfinished; private skill material stays outside the public guide.

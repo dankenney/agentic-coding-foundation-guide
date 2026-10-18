@@ -13,11 +13,19 @@ If the lesson comes from private work, ask what someone else could use, then tes
 1. Check the current guide revision, open review branches, recently accepted changes, and unresolved candidates so you don't duplicate a proposal or overwrite someone else's work.
 2. Review due or changed sources in [the registry](source-watch.json). Look for relevant corrections and useful practices in official release notes and publications. Review selected new private notes where you have authorized access, and say which sources you couldn't check.
 3. Read the source pages, including their exceptions. A changed hash or a new release gives you something to investigate; it doesn't tell you whether the guidance needs to change.
-4. Propose zero to three changes using the [weekly review packet](../templates/weekly-review.md). For each, name the page, proposed diff, affected reader or platform, supporting source, practical example, evidence, and limitation. Include guidance that should be removed.
+4. Prepare zero to three changes using the [weekly review packet](../templates/weekly-review.md). For each, name the page, proposed diff, affected reader or platform, supporting source, practical example, evidence, and limitation. Include guidance that should be removed. Complete the [editing passes](#edit-every-proposal-before-review) before presenting an edit as ready for review.
 5. Discuss whether to adopt, trial, watch, or reject each proposal with the maintainer. Be clear about missing source coverage. If nothing warrants a change, say so.
 6. After acceptance, apply the agreed edits on a review branch. Run the checks and affected learner route, update verification dates only for claims you reviewed, and record the decision. Merge and publication still require authorization.
 
 Keep rejected or deferred candidates in the private system with a short reason and a trigger for revisiting them. Record adopted changes in the public changelog. Save a weekly record only when there's a decision or evidence worth keeping.
+
+## Edit every proposal before review
+
+For every proposed edit, read the affected pages in full and review all changed wording, including headings, prompts, templates, and replacement text. Check removals in context too. Apply the [natural writing editor](../skills/natural-writing-editor/SKILL.md) first, then the maintainer's privately configured voice skill. Run both passes again if the wording changes during review.
+
+After the voice pass, compare the result with the intended change and its sources. Preserve technical meaning, commands, examples, citations, qualifications, and permission boundaries. Editing for voice must not add an unsupported claim or weaken an instruction.
+
+Record completion of both passes and that final comparison in the review packet. If either skill is unavailable or a pass is unfinished, keep the candidate pending and report what's missing. Research can continue, but the edit isn't ready for review. Keep the voice skill, its private configuration, and its source material outside shared packets, public files, and workflow artifacts. Configure access privately; don't upload the skill to run maintenance.
 
 ## What should become guidance?
 
