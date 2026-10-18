@@ -10,31 +10,36 @@ An agent can read a project, propose an approach, change files, and run tools. Y
 
 For a first try without a project, use the [supplied practice task](examples/practice-task.md): made-up reports, expected answers, and no connected accounts. If your tool cannot create files and run commands, start with the [short CSV walkthrough](examples/worked-task.md#document-to-csv-verify-each-extracted-value).
 
-| What you need today | Start here | What you will leave with |
-| --- | --- | --- |
-| Your first useful result | [First task](guide/first-task.md) | A small change you have checked yourself |
-| A better way to delegate work | [The working loop](guide/workflow.md) | A clear brief and a reviewable result |
-| An agent that understands the project | [Context that earns its place](guide/context.md) | Small, useful project instructions |
-| Confidence that the result works | [Verification](guide/verification.md) | Evidence from actual behavior |
-| A session that has gone off track | [Recovery](guide/recovery.md) | A known state and a next diagnostic step |
-| Consistent team practice | [Working as a team](guide/team-practice.md) | Shared boundaries and a useful handoff |
-| Repeated or larger work | [Advanced practice](guide/advanced.md) | A reasoned choice about tools and automation |
-| Tool-specific differences | [Platform notes](guide/platforms.md) | The details to verify in your own environment |
-
-Read [one worked task](examples/worked-task.md) to see the brief, review, failure, and lesson fit together. Use the [templates](templates/README.md) when an empty page is slowing you down.
-
 ## Bring your agent
 
 Give an agent this repository link and this request:
 
 ```text
-Read guide/agent-entry.md in this repository. Help me complete one useful
-task with the guide. Adapt to my experience and tools. Start by finding
-out what I want to accomplish; teach through the work and show evidence
+Read guide/agent-entry.md
+in this repository. Help me
+complete one useful task
+with the guide. Adapt to my
+experience and tools. Start
+by finding out what I want
+to accomplish; teach through
+the work and show evidence
 before calling it done.
 ```
 
 The [agent entry](guide/agent-entry.md) is a short route through the guide, with readiness checks and stopping points. It works by reading ordinary Markdown; no special integration is required. [llms.txt](llms.txt) is a navigation index, not a promise that every agent discovers it automatically.
+
+## Choose a chapter
+
+- [First task](guide/first-task.md): complete one small change and check it yourself.
+- [The working loop](guide/workflow.md): give a clear brief and review the result.
+- [Context that earns its place](guide/context.md): help the agent follow the project with small, useful instructions.
+- [Verification](guide/verification.md): check actual behavior.
+- [Recovery](guide/recovery.md): get a stalled session to a known state and choose the next diagnostic step.
+- [Working as a team](guide/team-practice.md): agree boundaries and leave a useful handoff.
+- [Advanced practice](guide/advanced.md): choose tools and automation for repeated or larger work.
+- [Platform notes](guide/platforms.md): verify details in your environment.
+
+Read [one worked task](examples/worked-task.md) to see the brief, review, failure, and lesson fit together. Use the [templates](templates/README.md) when an empty page is slowing you down.
 
 ## The habits this guide teaches
 
