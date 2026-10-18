@@ -16,7 +16,7 @@ Start with the [working loop](workflow.md). Use these notes when a platform diff
 
 Sandbox restrictions and approval policy are separate controls; network and managed policy also affect what can run. A setting that suppresses prompts does not by itself establish containment. [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
 
-**Our practice.** Confirm the working directory, loaded instructions, active controls, and available runtime tools before relying on them. Give a task concrete completion evidence and permission to finish authorized local verification. Keep durable milestones in the project's Git history and verify recovery for data and external effects separately. A desktop, CLI, IDE, or cloud session may expose different tools and environments; do not infer capability from the model name.
+**Our practice.** Confirm the working directory, loaded instructions, active controls, and available runtime tools before relying on them. Specify what evidence would complete the task and which local checks the agent may run. Keep durable milestones in the project's Git history and verify recovery for data and external effects separately. A desktop, CLI, IDE, or cloud session may expose different tools and environments; do not infer capability from the model name.
 
 ## Cursor
 

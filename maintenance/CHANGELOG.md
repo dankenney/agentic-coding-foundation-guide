@@ -30,3 +30,8 @@
 
 - Added bounded problem discovery, software judgment through a concrete data path, and optional next-practice choices within existing chapters.
 - Added three primary DeepLearning.AI skills-map sources to the weekly source registry, with claim scope and educational limits.
+
+## 2026-10-18 — Focused prose edit
+
+- Tightened explanations of delegation, review, verification, and added capability while preserving the guide's structure and technical requirements.
+- Added an optional generic natural writing editor for maintainers, with safeguards for citations, qualifications, code, and navigation.

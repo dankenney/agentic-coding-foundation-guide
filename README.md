@@ -4,7 +4,7 @@
 
 A field guide for people who use coding agents at work: engineers, analysts, operators, designers, and the teammates building alongside them. Start with a small, useful change. Grow into systems you can inspect, trust, and maintain.
 
-An agent can read a project, propose an approach, change files, and run tools. Your contribution is to make the work worth doing: choose the outcome, supply the context that matters, exercise judgment, and decide what evidence is enough.
+An agent can read a project, propose an approach, change files, and run tools. You choose the outcome, supply the context that matters, and judge whether the evidence is enough.
 
 ## Start where you are
 
