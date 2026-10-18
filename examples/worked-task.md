@@ -1,14 +1,14 @@
-# Worked tasks: make the result observable
+# Worked examples
 
-These synthetic scenarios explain expected behavior and failure modes; they are not execution logs. The request tracker is illustrative. For an exercise with supplied inputs and independent expected outputs, use the [practice task](practice-task.md).
+These are made-up scenarios for working through a task and checking the result. They describe what should happen; no tests were run for this page. The request tracker illustrates an app change. The separate [practice task](practice-task.md) has input files and independent expected outputs you can use yourself.
 
 ## Request tracker: filter open requests by owner
 
 ### Before
 
-A team uses an existing request tracker. Its Open tab lists requests the signed-in viewer may access. Finding one owner's work requires scanning the table. The app already has authentication and server-side access controls.
+A team has a request tracker with an Open tab that lists the requests the signed-in viewer may access. To find one owner's work, they have to scan the table. The app already has authentication and server-side access controls.
 
-Use an isolated test environment and disposable viewer accounts; confirm the preview's backend before seeding data. Disable downstream notifications or other external effects for the exercise. Use these synthetic fixtures; IDs are stable, while owner names are display labels:
+Before adding test data, confirm that the preview uses an isolated backend and disposable viewer accounts. Disable notifications and any other external effects for the exercise. Use the made-up records below. Their IDs stay fixed; owner names are display labels.
 
 | Request ID | Owner / owner ID | Status | Viewers with access |
 | --- | --- | --- | --- |
@@ -19,13 +19,13 @@ Use an isolated test environment and disposable viewer accounts; confirm the pre
 | c-1 | Owner C / owner-c | Closed | Viewer 1 |
 | d-1 | Owner D / owner-d | Open | Neither viewer |
 
-The existing owner directory makes Owners A, B, and C selectable for Viewer 1, including Owner C with no open requests. Begin checks as Viewer 1 unless stated otherwise; the unfiltered Open tab contains exactly a-1, a-2, and b-1.
+Viewer 1 can select Owners A, B, and C from the existing owner directory, including Owner C, who has no open requests. Start checks as Viewer 1 unless a step says otherwise. The unfiltered Open tab should contain exactly a-1, a-2, and b-1.
 
 ### Brief
 
 > Add an owner filter to the Open tab. Default to all owners. Selecting an owner should show only that owner's open requests that the viewer may access. Preserve the filter in the URL so reload and shared links reproduce the view for each viewer's own permissions. Reuse existing UI and query conventions. Keep existing authentication and authorization. Make the smallest complete change, run the relevant checks, and show evidence for the visible behavior.
 
-Work within the existing request and repository rules. This task does not authorize a new identity system, permission model, deployment, or external communication.
+Follow the request and repository rules. Adding this filter doesn't authorize a new identity system, a different permission model, deployment, or external communication.
 
 ### Acceptance
 
@@ -41,17 +41,17 @@ Work within the existing request and repository rules. This task does not author
 | Change the owner ID in the filtered URL to one outside the viewer's scope | No inaccessible rows or owner details are returned by the server or shown in the UI. The filter does not grant access. |
 | Exercise the existing login/logout flow | Existing access behavior still works; unauthorized rows never appear. |
 
-The agent first finds the table, filter conventions, query/cache code, and existing access tests. It states the likely files and verification approach, then implements within that scope. If the change requires broader authority or an incompatible API change, it reports the specific dependency before proceeding.
+The agent should find the table, existing filter patterns, query/cache code, and access tests first. It can then explain which files it expects to change and how it will check the result. If it needs broader authority or an incompatible API change, it should explain that dependency before proceeding.
 
-### A misleading success and the diagnostic seam
+### The API is correct, but the table is stale
 
-Suppose the API request includes `owner_id=owner-a` and returns the right rows, but the table still shows every owner. An API test would pass while the feature fails.
+Suppose the API request includes `owner_id=owner-a` and returns the right rows, but the table still shows every owner. The API test passes. The person trying to use the filter still has the original problem.
 
-Reproduce by selecting Owner A in the browser and observing the table. Follow the state across the control, URL, request parameters, cache key, response, and rendered rows. One possible cause is that the cache key includes the Open tab but omits the owner. If confirmed in the code and runtime trace, include the owner in the query identity and use the project's existing mechanism for avoiding stale responses. Then rerun the original interaction. Do not assume this diagnosis applies to every stale table.
+Select Owner A in the browser and watch the table to reproduce the failure. Follow the state from the control through the URL, request parameters, cache key, response, and rendered rows. The cache key might include the Open tab but omit the owner. If the code and runtime trace confirm that cause, include the owner in the query identity and use the project's existing mechanism for avoiding stale responses. Then repeat the original interaction. Check the cause before using this fix on another stale table.
 
 ### Verification record to complete during real work
 
-Record actual results against the tested commit and environment. Leave an unrun check marked **not run**.
+Record what happened against the commit and environment you tested. Mark a check **not run** if you couldn't execute it.
 
 ```text
 Commit / environment / fixture setup:
@@ -64,24 +64,24 @@ Live/UAT: same interaction results, or no existing URL / access unavailable
 Unresolved failures or limits:
 ```
 
-Keep the runtime script as a required check for future filter regressions. A screenshot can show a moment; assertions and a trace should establish the interaction that produced it. Fix failed checks before expanding the feature.
+Keep the runtime script as a required check for future filter regressions. Use assertions and a trace to check the interaction; a screenshot alone only shows one moment. Fix failed checks before expanding the feature.
 
 ### Rollout and reusable lesson
 
-Review the diff and evidence, then use the project's existing release and approval process. Repeat the runtime checks against an existing live/UAT environment before sign-off. If rollout fails, revert the change using the project's recovery process and retain the reproduction.
+Review the diff and check results through the project's existing release and approval process. Before sign-off, repeat the runtime checks against an existing live/UAT environment. If rollout fails, use the project's recovery process to revert the change and keep the reproduction so someone can investigate it.
 
-Candidate lesson: **when a filter request is correct but rows stay stale, trace query identity and rendered state together.** Adopt that lesson only after a real reproduction and verified fix. Its limit: other failures may come from server filtering, access rules, or race handling.
+After a real reproduction and verified fix, this could become useful guidance: when a filter request is correct but rows stay stale, check query identity alongside rendered state. Other failures can come from server filtering, access rules, or race handling, so keep that limit with the advice.
 
 ## Document to CSV: verify each extracted value
 
 Suppose a synthetic two-page operations report contains `North: 12` on printed page 1 and `South: 8` on printed page 2. The task is to extract region, request count, and printed source page into CSV. The expected rows are `North,12,1` and `South,8,2`.
 
-In a chat-only walkthrough, write the brief and compare rows by hand; defer the file and execution checks below until an approved environment can run them.
+With a chat-only tool, write the brief and compare the rows by hand. Leave the file and execution checks below for an approved environment that can run them.
 
-Specify the schema, units, page-number convention, and missing-value rule before extraction. Preserve the original source and record its file hash with the extraction output. Do not infer missing counts.
+Before extracting anything, agree on the schema, units, page-number convention, and missing-value rule. Keep the original source and record its file hash with the output so someone can identify the version you used. Don't infer missing counts.
 
-Verify that the CSV parses, has the agreed header and exactly two data rows, includes each expected region once, and uses integer counts. Reject missing or duplicate rows. Compare each value, region label, and page number with the actual source page; a matching total alone could hide swapped regions. If a total is needed, calculate 20 deterministically from verified rows. Inspect the delivered CSV itself, including quoting and encoding, rather than the agent's summary.
+Open the delivered CSV and check that it parses, has the agreed header and exactly two data rows, includes each expected region once, and uses integer counts. Check quoting and encoding as well. Reject missing or duplicate rows. Compare every count, region label, and page number with the actual source page. A total of 20 could still hide swapped regions. If you need the total, calculate it deterministically from the verified rows.
 
-Record the source version, script/command, row-level comparisons, actual results, and unresolved ambiguities. This example has no execution evidence. Check factual claims at the smallest useful unit: value, unit, label, and source location.
+Save the source version, script/command, row-level comparisons, actual results, and any unresolved ambiguity. This example hasn't been executed. In a real task, those records should let someone check each value, its unit and label, and where it came from.
 
 Continue with [verification](../guide/verification.md) or use the [task brief](../templates/task-brief.md).

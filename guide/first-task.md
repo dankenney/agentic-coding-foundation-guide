@@ -1,16 +1,16 @@
-# Your first useful task
+# Your first task
 
-**Goal:** complete one small change you can recognize and check. You do not need a custom agent stack, a prompt library, or a new subscription to learn the working habits.
+Start with one small change that you understand well enough to check yourself. You can learn these habits with an approved coding tool and a practice project; there's no need to assemble a new set of tools first.
 
 ## Choose an outcome you understand
 
-Use an approved coding tool and a project you are allowed to change. An existing, working project is a good place to start because you can compare before and after. If you have no project, practice with a disposable example and made-up data.
+Choose a project you're allowed to change. An existing, working project gives you something to compare before and after. If you don't have one, use a disposable practice folder and made-up data.
 
-For a ready-made starting point, use the [report-to-CSV practice task](../examples/practice-task.md). It supplies input files, exact expected outputs, and failure cases. You can complete it without designing an app or connecting a service.
+The [report-to-CSV practice task](../examples/practice-task.md) supplies the input files, expected outputs, and failure cases. It's a useful starting point if you'd rather try the process before designing an app or connecting a service.
 
-Good first tasks include clearer validation on a form, a filter on a small list, or a script that converts a sample file into a specified output. Pick something you can describe in one sentence and verify in a few actions. Defer production permissions, payments, and data migrations until someone responsible for those systems can help review them.
+Other good first tasks include clearer form validation, a filter on a small list, or a script that converts a sample file into a specified output. Pick something you can describe in a sentence and check in a few actions. Save production permissions, payments, and data migrations for work that someone responsible for those systems can help review.
 
-A **repository** is the project's versioned folder. A **diff** shows the file changes. A **commit** is a durable snapshot in version control. A **preview** is a running copy you can try; it may differ from the deployed version people use.
+A few terms will come up: a **repository** is the project's versioned folder, a **diff** shows file changes, and a **commit** saves a snapshot in version control. A **preview** is a running copy you can try. It may differ from the version people use.
 
 ## Orient before changing
 
@@ -23,9 +23,9 @@ how to run it, which checks apply, and what is already changed. Don't
 change files yet. Explain unfamiliar terms briefly as they come up.
 ```
 
-In an existing project, have it show the actual run commands instead of guessing and confirm that the app or script currently runs. Preserve existing work and identify a recoverable starting point with the project's version control. A backup or checkpoint is useful only if you know what it restores. In a new practice folder, start from the supplied inputs; there is no existing app to run or Git setup to complete first.
+In an existing project, ask for the actual run commands and check that the app or script runs before changing it. Keep any existing work and identify a starting point you can restore through the project's version control. Find out what that restore covers. In a new practice folder, you can begin with the supplied inputs; you don't need an existing app or Git setup.
 
-Before trying buttons or entering data, confirm which backend the running copy uses. A local preview can still connect to production. Use disposable data and a test account where needed; pause an interaction if its effects are unclear. The [verification guide](verification.md#before-an-interaction-check) explains the setup.
+Before trying buttons or entering data, check which backend the running copy uses. A local preview can still connect to production. Use disposable data and a test account where needed. If you can't tell what an interaction might change, pause it and check the setup in the [verification guide](verification.md#before-an-interaction-check).
 
 ## Give it a small, complete brief
 
@@ -42,30 +42,30 @@ briefly, then implement. Run the project's static checks and exercise
 the filter and reset through the UI. Show what you checked and any gaps.
 ```
 
-Replace the example with your task. A useful brief names the result, constraints, and evidence. If a decision would change what you want, resolve it before implementation. For a larger or uncertain task, ask for a plan first. For a clear small change, a short approach is enough.
+Replace the example with your own task. Say what you want, what limits apply, and how you'll check the result. Resolve any decision that could change the intended outcome before implementation. Ask for a plan if the task is large or uncertain; a clear, small change usually needs only a short explanation of the approach.
 
 ## Watch the result, then inspect the change
 
-Try the user action yourself. Does the list change? Does reset restore the expected list? Is an empty result understandable? If persistence matters, refresh and check it. Ask the agent to open the changed files or diff and explain how the change causes the behavior you observed.
+Try the filter yourself. Check that selecting an owner changes the list, reset restores it, and an empty result makes sense. If the selection should persist, refresh and check it. Then open the changed files or diff with the agent and ask it to connect the code to what you observed.
 
-Optionally, predict what a small example will do, then try a variation. Trace one value from input through any API (a service interface) and storage to the screen—or from source file to output for a script. Explain where it could become stale or who may access it; ask which reliability or cost tradeoff the design makes. This puts [software fundamentals](https://www.linkedin.com/pulse/ai-engineering-skills-map-software-fundamentals-andrew-ng-7lnac) to work on your task.
+To understand more of the implementation, predict what a small example will do, then try a variation. Follow one value from input through any API (a service interface) and storage to the screen. For a script, follow it from source file to output. Explain where the value could become stale, who may access it, and what the design trades off in reliability or cost. This is one way to practice [software fundamentals](https://www.linkedin.com/pulse/ai-engineering-skills-map-software-fundamentals-andrew-ng-7lnac) on your own task.
 
-You are looking for unintended changes as well as the requested result. Why did a new package appear? Why did a permission file change? You do not need to understand every line, but you should know what changed, how it was checked, and who can review what you cannot yet assess.
+Look for changes you didn't ask for, too. A new package or a changed permission file deserves an explanation. You don't need to understand every line, but you should know what changed, how it was checked, and who can review the parts you can't yet assess.
 
-If the result fails, say what happened with the exact steps and visible result. Move to [recovery](recovery.md); repeated requests to “fix it” provide little new evidence.
+If something fails, record the steps you took and what you saw, then use the [recovery guidance](recovery.md). Give the agent that evidence before asking it to try another fix.
 
 ## Finish with something you can resume
 
-Ask for a concise handoff: what changed, how to run it, checks and actual outcomes, remaining limits, and the next step. Use the team's normal review process before sharing or deploying it.
+Before you stop, ask for a short handoff with the changes, run command, actual check results, remaining limits, and next step. Use your team's normal review process before sharing or deploying the result.
 
-You have completed the exercise when you can show the result, find the changed files or diff, and repeat a check. Read [the working loop](workflow.md) next to make the process easier to repeat. The [worked task](../examples/worked-task.md) shows what a complete brief and review can look like.
+You've completed the exercise when you can show the result, find the changed files or diff, and repeat a check. Use [the working loop](workflow.md) when you're ready to apply the process again. The [worked task](../examples/worked-task.md) includes a full brief and review.
 
 ## Choose what to practice next
 
-Use DeepLearning.AI's [AI Engineering Skills Map](https://www.linkedin.com/pulse/ai-engineering-skills-map-andrew-ng-m479c/) as an optional learning compass. These are our small exercises; choose one gap after your first result.
+DeepLearning.AI's [AI Engineering Skills Map](https://www.linkedin.com/pulse/ai-engineering-skills-map-andrew-ng-m479c/) can help you choose what to learn next. The exercises below are our suggestions. Pick one that addresses a gap you noticed in the task.
 
 | Gap | Next exercise |
 | --- | --- |
 | Unsure whether a feature helps | [Working loop](workflow.md#define-the-outcome): name one assumption and evidence that would stop the build. |
-| Cannot explain the data flow | [Recovery](recovery.md#follow-the-data-across-the-seam): trace one working value and explain what survives a refresh or rerun. |
+| Cannot explain the data flow | [Recovery](recovery.md#find-where-the-behavior-breaks): trace one working value and explain what survives a refresh or rerun. |
 | Cannot judge “done” | [Verification](verification.md): derive one expected output from made-up input and compare the actual result. |

@@ -1,39 +1,39 @@
-# Keep a selective, living guide
+# Maintain the guide
 
-**Goal:** improve the guidance when evidence or practice changes. A small, current guide is more useful than an expanding feed.
+Keep the recommended workflows current, and add guidance when a correction or tested practice would help someone use a coding agent. Review new releases for useful changes without trying to cover them all.
 
-## Capture privately, publish selectively
+## Review lessons from private work
 
-Use the [lesson template](../templates/lesson.md) for discoveries from work, a new primary source, or a failed workflow. Keep private sources and identifiable examples in an approved private intake system, such as Notion. Capture the exact source, date, practical decision, candidate wording, evidence, and uncertainty.
+Use the [lesson template](../templates/lesson.md) when a task, a failed workflow, or a new primary source suggests something worth adding. Record the source and date, the decision it could change, a proposed edit, and the evidence and uncertainty. Keep private sources and identifiable examples in an approved private system, such as Notion.
 
-Translate a private observation into a general hypothesis. Test it on safe examples and seek public support where appropriate. A private note can motivate a recommendation; it cannot establish a public product fact. Do not synchronize an entire notebook into the guide or preserve private links in the public review packet.
+If the lesson comes from private work, ask what someone else could use, then test that guidance on examples that are safe to share. Find public support where the claim needs it. A private note can suggest a recommendation, but a product claim still needs public evidence. Review individual candidates rather than syncing a notebook into the guide, and leave private links out of the public review packet.
 
 ## Prepare a weekly review
 
-1. Inspect the guide's current revision, open review branches, recent accepted changes, and unresolved candidates. Avoid duplicate proposals or overwriting concurrent work.
-2. Review due or changed sources from [the registry](source-watch.json), then inspect relevant official release notes and publications for corrections or useful new practices. Also inspect selected new private intake with available authorized access. State gaps; never imply a complete scan of every source or notebook.
-3. Read source pages and their exceptions. A changed hash or new release is a lead, not proof that the guide needs editing.
-4. Select **zero to three** useful proposals. Give each a specific page, proposed diff, affected reader/platform, source, practical example, evidence, and limitation. Include obsolete guidance to remove. Use the [weekly review packet](../templates/weekly-review.md).
-5. Discuss adopt / trial / watch / reject with the maintainer. An incomplete source scan remains incomplete. No substantive change is a valid outcome.
-6. After acceptance, apply the agreed edits on a review branch, run checks and the affected learner route, update source dates for claims actually reviewed, and record the decision. Do not merge or publish automatically.
+1. Check the current guide revision, open review branches, recently accepted changes, and unresolved candidates so you don't duplicate a proposal or overwrite someone else's work.
+2. Review due or changed sources in [the registry](source-watch.json). Look for relevant corrections and useful practices in official release notes and publications. Review selected new private notes where you have authorized access, and say which sources you couldn't check.
+3. Read the source pages, including their exceptions. A changed hash or a new release gives you something to investigate; it doesn't tell you whether the guidance needs to change.
+4. Propose zero to three changes using the [weekly review packet](../templates/weekly-review.md). For each, name the page, proposed diff, affected reader or platform, supporting source, practical example, evidence, and limitation. Include guidance that should be removed.
+5. Discuss whether to adopt, trial, watch, or reject each proposal with the maintainer. Be clear about missing source coverage. If nothing warrants a change, say so.
+6. After acceptance, apply the agreed edits on a review branch. Run the checks and affected learner route, update verification dates only for claims you reviewed, and record the decision. Merge and publication still require authorization.
 
-Keep rejected or deferred candidates in private intake with a short reason and reconsideration trigger. Keep the public changelog about adopted guidance. Avoid creating a permanent weekly file when there is no useful durable record.
+Keep rejected or deferred candidates in the private system with a short reason and a trigger for revisiting them. Record adopted changes in the public changelog. Save a weekly record only when there's a decision or evidence worth keeping.
 
 ## What should become guidance?
 
 | Decision | Use when | Follow-through |
 | --- | --- | --- |
-| Adopt | A supported correction or useful practice with adequate evidence | Reviewable edit and appropriate validation |
-| Trial | Promising, but local usefulness is uncertain | Small safe experiment with success/stop conditions |
-| Watch | Relevant but premature or inaccessible | Named question and revisit trigger |
-| Reject | Weak, redundant, irrelevant, or costly | Brief reason; no guide expansion |
-| Retire | Existing guidance no longer earns its place | Remove or replace it; fix incoming links |
+| Adopt | A correction or useful practice has enough support | Prepare the edit and validate it |
+| Trial | The idea looks useful, but we need to test it | Run a small, safe experiment with success and stop conditions |
+| Watch | The idea is relevant, but it's too early or we lack access | Record the open question and when to revisit it |
+| Reject | The proposal is weak, redundant, irrelevant, or too costly | Record the reason and leave it out |
+| Retire | Existing guidance is obsolete or no longer useful | Remove or replace it and fix incoming links |
 
-Treat current official docs as the primary source for product mechanics, and primary research as evidence with its own methods and limits. Check conflicts explicitly. A newer timestamp alone does not supersede a more specific statement.
+Use current official docs to check product mechanics. Read primary research with its methods and limits in view. If sources conflict, explain the conflict; a newer date doesn't automatically outweigh a more specific statement.
 
 ## Source evidence tools
 
-The registry maps sources to the pages they support. `last_verified` is a human research date; `review_after_days` sets an editorial review interval. Fast-changing platform mechanics use shorter intervals than stable concepts. Neither is a product freshness guarantee.
+The registry maps sources to the pages they support. `last_verified` records when someone assessed the relevant claim, and `review_after_days` sets the interval for reviewing it again. Platform mechanics change more often than stable concepts, so they have shorter intervals. These dates help schedule review; they don't guarantee that a product claim is still current.
 
 ```sh
 python scripts/check_guide.py
@@ -47,14 +47,14 @@ For a later run, choose a new output filename and optionally compare with the ea
 python scripts/source_watch.py --baseline work/source-review-2026-10-17.json --output work/source-review-next.json
 ```
 
-Use `--only SOURCE_ID` to inspect one source, and `--timeout 10` to set the per-request socket timeout. A failed fetch exits nonzero and records missing coverage. A successful fetch records response and redirect metadata plus a digest of the complete response. A byte change can be page navigation or dynamic content; unchanged bytes do not establish that every claim is still correct. The watcher never updates guidance or verification dates.
+Use `--only SOURCE_ID` to inspect one source and `--timeout 10` to set the per-request socket timeout. A failed fetch exits nonzero and records the missing coverage. A successful fetch saves response and redirect metadata plus a digest of the complete response. Inspect changes before drawing conclusions: navigation or dynamic content can change the bytes, and an unchanged page can still contain an outdated claim. The watcher doesn't update guidance or verification dates.
 
-The public-source registry is operator curated. URL checks reject obvious private note hosts, local hostnames, and literal private IPs, including redirect targets; they do not provide DNS-level network isolation. Run it with the same network controls appropriate to any other documentation fetcher. Reports stay in ignored `work/` or `reports/` paths, or an explicitly chosen external JSON file; use new filenames to preserve evidence.
+Maintainers choose the public sources in the registry. URL checks reject obvious private note hosts, local hostnames, and literal private IPs, including redirect targets. They don't provide DNS-level network isolation, so use the network controls you'd apply to another documentation fetcher. Save reports in ignored `work/` or `reports/` paths, or an explicitly chosen external JSON file. Use new filenames to preserve earlier evidence.
 
 ## Automation and ownership
 
-The [source-watch workflow](../.github/workflows/source-watch.yml) fetches public sources Fridays at 11:17 UTC and on manual dispatch, with read-only repository permissions. It stores a short-lived evidence artifact, including failed fetches, rather than opening or merging changes. Scheduled workflows start only after the file reaches the repository's default branch. Download a previous artifact if you want a local baseline comparison; scheduled runs do not automatically compare prior artifacts.
+The [source-watch workflow](../.github/workflows/source-watch.yml) fetches public sources on Fridays at 11:17 UTC and on manual dispatch. It has read-only repository permissions and saves a short-lived artifact containing the fetch results, including failures. It can't open or merge changes. Scheduled workflows start after the file reaches the repository's default branch. To compare a run with an earlier one, download the earlier artifact and use it as a local baseline; scheduled runs don't compare prior artifacts automatically.
 
-A separate, maintainer-owned weekly research session can combine that evidence with private intake and bring a review packet to the discussion. It needs authorized source access, a working checkout, and a reliable notification path. The automation configured in a maintainer's app is separate from this repository: cloning the guide does not install or schedule anything.
+A maintainer can use a separate weekly research session to review those results alongside private notes and prepare a review packet. That session needs authorized source access, a working checkout, and a reliable way to notify the maintainer. App automations are configured separately; cloning this guide doesn't install or schedule them.
 
-If access fails, sources become stale, or the process keeps producing unused digests, surface the missing coverage and repair, narrow, pause, or retire it with the owner. Do not silently recycle old recommendations or equate a scheduler invocation with a completed review.
+If access fails, sources become stale, or nobody uses the reports, tell the owner what's missing. Agree whether to repair, narrow, pause, or stop the process. Don't present old recommendations as newly reviewed or report a completed review just because a scheduled run started.

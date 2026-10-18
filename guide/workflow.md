@@ -1,11 +1,11 @@
 # The working loop
 
-**Use when:** you want to turn a request into a reviewable result. Scale the effort to the uncertainty and consequences; a spelling correction and a shared workflow do not need the same ceremony.
+Use this process to take a request through implementation, checks, and review. Spend more time on uncertain work or changes with serious consequences. A spelling correction needs much less preparation than a shared workflow.
 
 ```mermaid
 flowchart LR
     A[Define outcome] --> B[Inspect context]
-    B --> C[Make bounded change]
+    B --> C[Complete one part]
     C --> D[Verify behavior]
     D --> E[Review and hand off]
     D -->|Fails| B
@@ -14,48 +14,48 @@ flowchart LR
 
 ## Define the outcome
 
-Describe a person, a job, and a visible result. “Improve the dashboard” leaves the agent to invent your priorities. “A coordinator can find their overdue requests and export the filtered list” identifies a job you can test.
+Describe who needs the change and what they should be able to do. With “improve the dashboard,” the agent has to guess your priorities. “A coordinator can find their overdue requests and export the filtered list” gives it a specific result you can check.
 
-Agree what must hold before calling the task done. Include the primary action, a meaningful failure or empty case, and any existing behavior that must survive. Decide what is explicitly outside scope. If you cannot explain why the change matters, spend the next few minutes on the problem rather than on code.
+Agree how you'll decide the task is done. Cover the primary action, a meaningful failure or empty case, and existing behavior that needs to keep working. State what's outside scope too. If you can't explain why someone needs the change, work through that before asking for code.
 
-When the need is uncertain, name the assumption to test. Observe the current workflow or try a small prototype within your authorized scope. Decide what feedback would change or stop the work: “If coordinators need reminders rather than exports, drop the export.” This adapts the product judgment and feedback loop in Andrew Ng's [Shaping the build](https://www.linkedin.com/pulse/ai-engineering-skills-map-shaping-build-andrew-ng-td7uc/).
+If you're unsure what people need, identify the assumption you need to test. Watch the current workflow or try a small prototype within your authorized scope, then decide what feedback would change or stop the work. For example, “If coordinators need reminders rather than exports, drop the export.” This approach adapts the product judgment and feedback loop in Andrew Ng's [Shaping the build](https://www.linkedin.com/pulse/ai-engineering-skills-map-shaping-build-andrew-ng-td7uc/).
 
-The [task brief](../templates/task-brief.md) is a starting aid. OpenAI's current [best-practice guidance](https://learn.chatgpt.com/guides/best-practices) similarly distinguishes goal, context, constraints, and completion conditions. That is useful structure, not a required incantation.
+The [task brief](../templates/task-brief.md) can help you organize this. OpenAI's current [best-practice guidance](https://learn.chatgpt.com/guides/best-practices) also distinguishes the goal, context, constraints, and completion conditions. Use those prompts where they help; you don't need a form for every request.
 
 ## Inspect before choosing the implementation
 
-Have the agent find the existing pattern, applicable instructions, run commands, tests, and affected contracts. Ask it to distinguish observations from assumptions. Reuse the project's existing mechanism when it fits the task.
+Ask the agent to inspect how the project already handles similar work, which instructions apply, how to run it, and what tests and contracts the change affects. It should explain what it found and where it's making assumptions. Use the existing approach when it fits.
 
-For uncertain work, request a short plan: approach, affected areas, open decisions, verification, and recovery. Resolve decisions whose answers materially change the implementation. Let ordinary reversible implementation choices proceed within the agreed scope.
+For uncertain work, ask for a short plan covering the approach, affected areas, open decisions, checks, and recovery. Settle decisions that would materially change the implementation. The agent can make ordinary, reversible implementation choices within the agreed scope.
 
-## Make a bounded change
+## Start with one complete part
 
-Choose a slice that can work end to end. For the export example, first export a small known filtered set using the existing data path. A polished button connected to an untested stub is a weaker stopping point.
+Choose a small part of the task that can work end to end. For the export example, start by exporting a known filtered set through the existing data path. You can then check the actual output before spending time polishing the button.
 
-Ask the agent to continue through implementation and verification, fixing failures caused by its change. State external boundaries concretely: whether it may install packages, connect services, spend money, send messages, deploy, or change production data. Natural-language boundaries should accompany actual tool and account permissions.
+Ask the agent to finish the implementation and checks, including fixing failures caused by its change. Be explicit about whether it may install packages, connect services, spend money, send messages, deploy, or change production data. Set tool and account permissions to match those instructions.
 
-Keep a recoverable starting state. For parallel work, assign distinct ownership and an integrator; see [advanced practice](advanced.md). Avoid combining a behavior change with unrelated refactoring unless it is necessary to make the change safely.
+Keep a starting state you can recover. If agents work in parallel, give each one distinct ownership and assign someone to integrate their work; see [advanced practice](advanced.md). Keep unrelated refactoring out of a behavior change unless it's necessary to make the change safely.
 
 ## Verify the outcome
 
-Run the project's required static checks, then exercise real behavior. Check the produced thing: use the UI, read the exported file, inspect the stored record, or open the generated document. Confirm that the environment and version are the ones you intend to review.
+Run the project's required static checks, then try the result. Use the UI, read the exported file, inspect the stored record, or open the generated document. Confirm you're checking the intended version in the right environment.
 
-Ask for evidence tied to acceptance criteria, including skipped checks. A command that exited successfully proves only what that command checked. A second agent's agreement adds little unless it independently inspects the result. See [verification](verification.md).
+Ask the agent to show how the result meets the acceptance criteria and identify any checks it skipped. Check what each successful command actually tested. If a second agent reviews the work, have it inspect the result independently. See [verification](verification.md).
 
 ## Review and hand off
 
-Review the diff and the result together. Can you connect the changed code to the observed behavior? Are new dependencies, permissions, configuration, or instruction edits justified? Are errors understandable? What will a future maintainer need to know?
+Review the diff alongside the result so you can connect the code changes to the behavior you observed. Look closely at new dependencies, permissions, configuration, and instruction changes. Each should have a reason. Check that errors make sense to the person who'll encounter them and that a future maintainer has what they need to continue.
 
-The handoff should let someone resume without reconstructing the chat: outcome, artifact, exact commands, results, limits, and next step. Keep a decision record only when the choice has lasting consequences. Capture a reusable lesson only when it changes future work.
+In the handoff, include the outcome, artifact, exact commands and results, remaining limits, and next step. Someone should be able to resume from it without reading the whole chat. Record decisions with lasting consequences and lessons that would change how you handle similar work. You don't need a permanent record of every choice.
 
-## Know when to change the loop
+## When to change the approach
 
 | Situation | Better next move |
 | --- | --- |
-| The same failure returns after several attempted fixes | Stop broad edits; reproduce and isolate the boundary |
-| The plan keeps expanding | Deliver a smaller complete slice or resolve the missing decision |
+| The same failure returns after several attempted fixes | Stop broad edits; reproduce the failure and find where it starts |
+| The plan keeps expanding | Complete a smaller part of the task or resolve the missing decision |
 | You cannot review the diff | Reduce scope or bring in someone who can assess the affected system |
 | The agent lacks access to verify | Name the missing check and arrange an authorized run |
 | The task repeats with stable inputs and outputs | Consider a script or skill after a successful manual run |
 
-Progress is a useful, verified result and a project that remains understandable. Generated code volume, prompt count, and hours the agent guesses it saved are poor substitutes.
+When assessing progress, look at what now works, how it was checked, and whether the project is still understandable. Code volume, prompt counts, and the agent's guesses about hours saved won't tell you that.

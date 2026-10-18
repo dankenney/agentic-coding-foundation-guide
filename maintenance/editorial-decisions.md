@@ -1,29 +1,29 @@
 # Editorial decisions
 
-Baseline: 2026-10-17. These are design choices for this guide, not research findings about a universally best workflow.
+These decisions describe the guide's scope as of 2026-10-17. They're our editorial choices; we aren't claiming this is the best workflow for every team.
 
-## Center the work
+## Organize around tasks
 
-Organize around the decisions people face while delivering a useful result. Keep a short first-task path, then let readers choose depth by need. Make the outcome, evidence, limits, and recovery visible. Use neutral, synthetic workplace examples.
+Organize the guide around the decisions someone faces while completing a task with a coding agent. Give beginners a short first-task path and let readers go deeper when they need to. Explain what the task should produce, how to check it, where the advice applies, and what to do if it fails. Use made-up workplace examples that don't depend on knowing the author's environment.
 
-## Give agents a real entrance
+## Help agents find the relevant guidance
 
-Provide a short router, readable Markdown, and a navigation index. Ask only for context that changes the next action. Teach through a task and report missing access honestly. Treat the user's own project instructions and authorization as controlling. Do not require an installation or promise universal automatic discovery.
+Give agents a short entry page, readable Markdown, and a navigation index so they can find the relevant guidance. Ask for context only when it changes the next action, teach through a task, and say when access is missing. The user's project instructions and authorization govern work in their project. Using the guide shouldn't require an installation, and we shouldn't promise that every agent will discover it automatically.
 
-## Separate durable practice from product mechanics
+## Keep platform details in one place
 
-Keep concepts in the core and dated operational differences in one adapter page. Remove fixed model assignments, obsolete setup commands, personal workspace architecture, estimated hours saved, and large mandatory scaffolds. Keep templates optional.
+Explain working habits in the core chapters and keep dated product differences in [platform notes](../guide/platforms.md). Leave out fixed model assignments, obsolete setup commands, personal workspace layouts, unsupported estimates of hours saved, and large setups every reader is expected to adopt. Offer templates where they help, without making them a prerequisite.
 
-## Select sources by the decision they support
+## Support claims with appropriate sources
 
-Read official product docs for mechanics, vendor engineering publications for conceptual patterns, and primary research with its methods and limitations. Private work can suggest hypotheses and examples; public prose must stand independently without exposing private provenance.
+Use official docs for product mechanics and vendor engineering articles for approaches worth considering. Read primary research alongside its methods and limitations. Private work can suggest a lesson, but the published guidance needs to make sense and have support without access to those private sources.
 
-The selected comparison set includes [AGENTS.md](https://agents.md/), which focuses on an instruction format, [OpenAI's best-practice guide](https://learn.chatgpt.com/guides/best-practices), which focuses on its own tooling, and [Microsoft's AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners), which teaches building agent systems through lessons and code. This is a scope comparison, not an exhaustive survey or quality ranking. Our chosen contribution is an applied cross-platform delivery guide with a beginner entrance, evidence and recovery at its center, and a maintained selection process.
+We compared the guide's scope with [AGENTS.md](https://agents.md/), an instruction format; [OpenAI's best-practice guide](https://learn.chatgpt.com/guides/best-practices), which focuses on its own tools; and [Microsoft's AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners), which teaches people to build agent systems through lessons and code. This isn't an exhaustive survey or a quality ranking. This guide focuses on using coding agents across platforms to complete practical work, starting with a small task and continuing through verification, recovery, and team use. We review additions to keep that scope useful.
 
-## Make maintenance earn its time
+## Review proposed changes
 
-Separate capture from adoption. Prepare a few concrete changes, including removals, and keep the human decision visible. A changed source does not demand a guide update. Do not create a news archive, a model leaderboard, an exhaustive connector catalog, or an automated publishing pipeline.
+A saved link or lesson is a candidate for review. Prepare a few proposed edits, including removals, and record the maintainer's decision before adopting them. Investigate changed sources without assuming they require an update. We aren't maintaining a news archive, model leaderboard, complete connector catalog, or automatic publishing pipeline.
 
-## Keep the publication boundary explicit
+## Review the full publication history
 
-Review publication scope beyond the current files: retained Git history, commit identities, branches, pull request discussions and diffs, and automation records can also contain private material. Keep private intake and local configuration outside the public repository. Automated pattern checks support this review; they cannot establish that every example is appropriate to publish. Express judgment through the guide's choices and generic examples.
+Before publication, review retained Git history, commit identities, branches, pull request discussions and diffs, and automation records as well as the current files. Any of them can contain private material. Keep private notes and local configuration outside the public repository. Use automated pattern checks to help with the review, then inspect the examples yourself.

@@ -1,25 +1,25 @@
 # Agentic Coding Foundation
 
-> Practical guidance for people and agents doing useful coding work. Read selectively; verify product behavior against the dated primary sources.
+> A guide to using coding agents at work. Read the pages relevant to the task, and check the dated primary sources before relying on product behavior.
 
 ## Start
-- [Agent entry](guide/agent-entry.md): Guided application, boundaries, and routing.
-- [First task](guide/first-task.md): A beginner's first useful change.
-- [Supplied practice task](examples/practice-task.md): Report fixtures, independent expected CSVs, and error/rerun cases for readers without a project.
-- [Working loop](guide/workflow.md): Brief, inspect, change, verify, hand off.
+- [Agent entry](guide/agent-entry.md): Help a reader choose a task and work within their project's rules.
+- [First task](guide/first-task.md): Complete and check a first small change.
+- [Supplied practice task](examples/practice-task.md): Use made-up reports and independent CSV answers to check a converter, including failures and reruns.
+- [Working loop](guide/workflow.md): Brief the task, inspect the project, make a change, and check the result.
 
 ## Practice
-- [Context](guide/context.md): Instructions, evidence, and task state.
-- [Verification](guide/verification.md): Actual behavior and evidence.
-- [Recovery](guide/recovery.md): Diagnosis, undo, and resuming work.
-- [Team practice](guide/team-practice.md): Ownership, review, and shared learning.
-- [Advanced practice](guide/advanced.md): Skills, tools, delegation, and budgets.
-- [Platform notes](guide/platforms.md): Dated operating differences.
-- [Worked task](examples/worked-task.md): A synthetic workplace example.
-- [Templates](templates/README.md): Briefs, instructions, handoffs, and lessons.
+- [Context](guide/context.md): Give the agent the right project instructions and task information.
+- [Verification](guide/verification.md): Check what the delivered result actually does.
+- [Recovery](guide/recovery.md): Diagnose a failure, restore the right state, and resume.
+- [Team practice](guide/team-practice.md): Agree who owns the work and how to review it.
+- [Advanced practice](guide/advanced.md): Choose skills, tools, parallel work, or automation for a specific need.
+- [Platform notes](guide/platforms.md): Check documented differences between tools.
+- [Worked task](examples/worked-task.md): Read made-up workplace examples with briefs and checks.
+- [Templates](templates/README.md): Copy the parts of a brief, handoff, or lesson that help with the task.
 
 ## Maintain
-- [Contributing](CONTRIBUTING.md): Editorial and validation requirements.
-- [Maintenance](maintenance/README.md): Weekly research and human decisions.
-- [Sources](maintenance/sources.md): Claim support and research limits.
-- [Learner scenarios](maintenance/learner-scenarios.md): Behavior checks for guide contributors; use after relevant teaching changes.
+- [Contributing](CONTRIBUTING.md): Propose and check an edit to the guide.
+- [Maintenance](maintenance/README.md): Review sources and choose which updates to adopt.
+- [Sources](maintenance/sources.md): See what each source supports and where its evidence stops.
+- [Learner scenarios](maintenance/learner-scenarios.md): Try the affected reader routes after changing how the guide teaches.

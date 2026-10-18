@@ -1,8 +1,8 @@
-# Add capability when the work earns it
+# Reuse workflows and add automation
 
-**Use when:** a working process has a concrete bottleneck. Start with the simplest approach that solves it, and remove what stops helping.
+Repeated work or a specific bottleneck gives you a reason to add a script, skill, tool, or automation. Start with the simplest option that addresses it.
 
-## Choose the mechanism for the problem
+## Choose what to add
 
 | Repeated problem | Smallest useful response | Evidence before expanding |
 | --- | --- | --- |
@@ -13,42 +13,42 @@
 | Independent work can proceed together | Parallel agents with distinct ownership | Integration cost is lower than the time saved |
 | A stable task should recur | Scheduled run with an owner and review path | Fresh inputs, successful runs, failure reporting, retirement rule |
 
-## Build a workflow before packaging it
+## Try the workflow before making it reusable
 
-Complete a representative task manually with an agent. Identify the inputs, decisions, outputs, checks, failure behavior, and boundaries. Then package only what repeats. Put deterministic logic in scripts and nuanced decisions in a concise procedure.
+Work through a representative task with an agent first. Identify what you provide, which decisions you make, how you check the output, and how to handle failure. Save the steps you'll repeat, using scripts for deterministic logic and short procedures for judgment.
 
-Skills should have a distinct trigger, a clear output, and supporting detail loaded when needed. Check how the target platform discovers and runs them; portability of a Markdown format does not guarantee identical execution. OpenAI's [skills guidance](https://developers.openai.com/plugins/concepts/skills) distinguishes tools that provide live capabilities from skills that organize a workflow around them.
+A skill needs to say when to use it, what it produces, and what supporting material to read along the way. Check how your platform discovers and runs skills; a portable Markdown file may run differently between platforms. OpenAI's [skills guidance](https://developers.openai.com/plugins/concepts/skills) distinguishes tools, which provide live capabilities, from skills, which organize work around them.
 
-Test a reusable procedure on a normal case, an edge case, and a case where it should decline or ask for missing information. Inspect the output and actions, not just whether the skill was invoked. Do not package a single preference as an elaborate skill.
+Try the procedure on a normal case, an edge case, and a case where it should decline or ask for missing information. Read the output and inspect its actions; successful invocation alone tells you little. A single preference usually needs a sentence in your instructions rather than its own skill.
 
-## Add tools with a job and a boundary
+## Connect a service for a specific task
 
-Before connecting a service, name the manual loop it will remove and which data/actions it needs. Start with read access if that proves the workflow. Inspect tool definitions, dependencies, and supporting scripts before enabling a new package. Keep credentials scoped and outside tracked examples.
+Before connecting a service, describe the work it will handle and the data and actions it needs. Read access may be enough to test the idea. Inspect tool definitions, dependencies, and supporting scripts before enabling a new package. Give credentials only the permissions required, and keep them out of tracked examples.
 
-Record the connected account, effective permissions, owner, and revocation route, including signed-in browser sessions. Before unattended writes, test how to stop the job and revoke its write access with a disposable connection. Neither step undoes earlier effects.
+Record the connected account, effective permissions, owner, and how to revoke access, including signed-in browser sessions. Before allowing unattended writes, test stopping the job and revoking its write access with a disposable connection. You'll still need to address any changes it made before you stopped it.
 
-Decide what can be read, changed, executed, sent, spent, or deployed. Enforce important limits through environment and account controls. Treat retrieved documents, logs, and ordinary source content as untrusted evidence. Recognized project instructions still apply under the user's and platform's governing rules. Anthropic's [tool design guidance](https://www.anthropic.com/engineering/writing-tools-for-agents) recommends distinct capabilities, relevant outputs, and realistic evaluations; this does not establish that any particular connector is safe or reliable.
+Decide what the agent can read, change, execute, send, spend, or deploy, and enforce the important limits through environment and account controls. Retrieved documents, logs, and ordinary source content may contain misleading instructions; treat them as evidence to assess. Recognized project instructions still apply under the user's and platform's governing rules. Anthropic's [tool design guidance](https://www.anthropic.com/engineering/writing-tools-for-agents) recommends distinct capabilities, relevant outputs, and realistic evaluations. Assess each connector yourself; the article doesn't establish whether a particular connector is safe or reliable.
 
-## Parallelize independent uncertainty
+## Split work that can proceed independently
 
-Good candidates include researching separate systems, reviewing a fixed diff, or implementing separate modules against an agreed interface. Give each worker a bounded output, file ownership, assumptions to check, and a stopping condition. An integrator owns the combined result.
+Parallel agents can help with researching separate systems, reviewing a fixed diff, or implementing separate modules against an agreed interface. Give each agent a specific output, files it owns, assumptions to check, and a stopping condition. Assign someone to integrate and verify the result.
 
-Use isolated branches or worktrees for independent edits when appropriate. A **worktree** is a separate working checkout sharing Git history; it does not isolate credentials, databases, or external services. Avoid multiple agents changing the same files or fixture data without coordination. More agents also add review, merging, cost, and failure paths.
+Separate branches or worktrees can keep independent edits apart. A worktree is a separate working checkout that shares Git history; credentials, databases, and external services need their own isolation. Coordinate agents that change the same files or fixture data. Consider whether the time saved is worth the extra review, integration, cost, and ways the work can fail.
 
-## Choose a model by the work
+## Choose a model for the task
 
-Use an approved, capable default. Increase reasoning or try another model when the evidence shows a bottleneck: difficult diagnosis, unresolved design tradeoffs, or repeated failures after context and environment are checked. Compare on a few representative tasks with the same inputs, tools, and acceptance checks. Keep cost, elapsed time, review effort, and failed attempts in view.
+Use an approved model that's capable of your usual work. Consider more reasoning or another model for a difficult diagnosis, unresolved design tradeoffs, or repeated failures after checking context and environment. Compare a few representative tasks using the same inputs, tools, and acceptance checks. Include cost, elapsed time, review effort, and failed attempts.
 
-Small leaderboard differences should not drive the process. Anthropic's [infrastructure-noise study](https://www.anthropic.com/engineering/infrastructure-noise) shows that evaluation resource settings can change coding scores. It studies particular benchmark setups, not every workplace task; the practical inference is to compare the complete working setup rather than a model name alone.
+Treat small leaderboard differences cautiously. Anthropic's [infrastructure-noise study](https://www.anthropic.com/engineering/infrastructure-noise) shows that evaluation resource settings can change coding scores in particular benchmark setups. It can't forecast performance on your team's work. The practical recommendation is to compare the complete setup, including tools and environment.
 
-## Operate an automation as a maintained system
+## Maintain what you automate
 
-Specify trigger, inputs, freshness requirements, allowed actions, output location, failure signal, owner, and stop/retire condition. Set a time, usage/spend, and retry budget; enforce limits where supported, stop when reached, and report why. Temporary increases need an expiry. A scheduled invocation is not evidence that the intended work finished. Verify that outputs are current and used.
+Write down when the automation runs, its inputs and freshness requirements, allowed actions, output location, owner, and when to stop or retire it. Decide how failures will reach the owner. Set limits on time, usage or spend, and retries; enforce them where supported, stop when reached, and report why. Give temporary increases an expiry. Check that each run produces current, useful output. Starting on schedule doesn't mean it finished its work.
 
-Start with a trial that proposes actions without external writes. Inspect the proposals and test an input failure and recovery before enabling writes. Graduate on demonstrated behavior, not elapsed days. A verified no-change result is valid; missing coverage is not.
+Start with a trial that proposes actions without external writes. Review the proposals and test an input failure and recovery. Enable writes once you have evidence that it handles the expected work and failures. A run that checks everything and finds no change can be successful. Missing required coverage needs attention.
 
-For external writes, use a stable operation identifier and destination-enforced duplicate prevention where supported. Otherwise avoid concurrent writers and reconcile any existing effect before retrying. A timeout after creating a ticket may mean the ticket exists. A label alone does not prevent duplicates. If the outcome remains unknown, stop and alert the owner. Test a lost confirmation before enabling unattended writes.
+For external writes, use a stable operation identifier and duplicate prevention enforced by the destination, where supported. Otherwise, avoid concurrent writers and check whether an earlier attempt took effect before retrying. If a ticket-creation request times out, the ticket may already exist. Adding a label won't prevent a duplicate. When you can't establish the outcome, stop and alert the owner. Test this lost-confirmation case before allowing unattended writes.
 
-For learning capture, let automation collect and propose while a person adopts changes. For stable deterministic work, a script may need less supervision. Review after changes to a model, tool, permission, dependency, or input contract. If a digest repeatedly produces no useful decision, narrow it or retire it.
+When collecting lessons for a guide or team, let automation propose changes for a person to accept. A script doing stable, deterministic work may need less supervision. Review the workflow when its model, tools, permissions, dependencies, or expected inputs change. If a recurring digest stops helping anyone make a decision, narrow it or retire it.
 
-**Check your result:** the added capability removes a measured obstacle, produces inspectable evidence, and remains recoverable. If the process becomes harder to explain than the work it performs, simplify it.
+Check whether the addition removed the bottleneck you started with. You should be able to inspect its results and recover when it fails. If maintaining it takes more effort than the work it saves, simplify it.
