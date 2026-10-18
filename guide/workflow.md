@@ -24,7 +24,7 @@ The [task brief](../templates/task-brief.md) is a starting aid. OpenAI's current
 
 ## Inspect before choosing the implementation
 
-Have the agent find the existing pattern, applicable instructions, run commands, tests, and affected contracts. Ask it to distinguish observations from assumptions. The point is to avoid building a second mechanism when the project already has one.
+Have the agent find the existing pattern, applicable instructions, run commands, tests, and affected contracts. Ask it to distinguish observations from assumptions. Reuse the project's existing mechanism when it fits the task.
 
 For uncertain work, request a short plan: approach, affected areas, open decisions, verification, and recovery. Resolve decisions whose answers materially change the implementation. Let ordinary reversible implementation choices proceed within the agreed scope.
 

@@ -22,6 +22,8 @@ Keep pages short enough to find the next action. Explain unfamiliar terms where 
 
 When adding a workflow, include an expected artifact, evidence of success, and a recovery path. Keep templates optional and proportional. Make navigation usable without installing a package or giving an agent write access.
 
+For prose revisions, the optional [natural writing editor](skills/natural-writing-editor/SKILL.md) helps remove filler while preserving technical meaning. It is a maintainer aid; readers do not need to install it to use the guide.
+
 ## Validate a contribution
 
 ```sh

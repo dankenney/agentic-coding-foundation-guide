@@ -23,7 +23,7 @@ For parallel work, define file or module ownership and shared contracts first. I
 
 ## Review the result people will receive
 
-A good review connects three things: the requested behavior, the changed implementation, and the observed result. Include the artifact/revision, how to run it, checks performed, known limits, and the decision needed. Make uncertainty visible enough that a reviewer can act on it.
+Review the requested behavior alongside the changed implementation and the observed result. Include the artifact/revision, how to run it, checks performed, known limits, and the decision needed. Name what remains uncertain and what would resolve it.
 
 For UI work, include a clear view of the changed flow and the relevant error or empty state. For exported files or reports, open the actual delivered file. For permissions or migrations, involve someone who can assess the affected contract and recovery plan. Keep real user data out of screenshots and fixtures.
 

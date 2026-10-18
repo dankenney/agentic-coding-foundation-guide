@@ -82,6 +82,6 @@ Specify the schema, units, page-number convention, and missing-value rule before
 
 Verify that the CSV parses, has the agreed header and exactly two data rows, includes each expected region once, and uses integer counts. Reject missing or duplicate rows. Compare each value, region label, and page number with the actual source page; a matching total alone could hide swapped regions. If a total is needed, calculate 20 deterministically from verified rows. Inspect the delivered CSV itself, including quoting and encoding, rather than the agent's summary.
 
-Record the source version, script/command, row-level comparisons, actual results, and unresolved ambiguities. This example has no execution evidence. The transferable lesson is to turn factual claims into checks at the smallest useful unit: value, unit, label, and source location.
+Record the source version, script/command, row-level comparisons, actual results, and unresolved ambiguities. This example has no execution evidence. Check factual claims at the smallest useful unit: value, unit, label, and source location.
 
 Continue with [verification](../guide/verification.md) or use the [task brief](../templates/task-brief.md).

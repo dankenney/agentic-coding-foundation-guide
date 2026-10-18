@@ -1,6 +1,6 @@
 # Add capability when the work earns it
 
-**Use when:** a working process has a concrete bottleneck. Advanced practice is the ability to choose the right amount of machinery and remove what no longer helps.
+**Use when:** a working process has a concrete bottleneck. Start with the simplest approach that solves it, and remove what stops helping.
 
 ## Choose the mechanism for the problem
 
