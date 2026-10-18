@@ -1,21 +1,21 @@
 # Task brief
 
-**Outcome:** What should a user be able to do, or what artifact should exist?
+**Outcome:** What should someone be able to do when this is finished? If the result is an artifact, describe it.
 
-**Starting point:** Repository, current behavior, relevant files, known constraints.
+**Starting point:** Name the repository and relevant files. Describe the current behavior and known constraints.
 
-**Scope:** The smallest complete change. Explicit exclusions that matter.
+**Scope:** Describe the smallest change that completes the task and anything it needs to leave alone.
 
-**Acceptance:** Observable actions and expected results. Include empty/error states, persistence, and existing access behavior when relevant.
+**Acceptance:** List the actions to try and the results you expect. Include empty and error states, persistence, and existing access behavior where relevant.
 
-**Evidence:** Relevant static checks; runtime interactions or artifact comparisons; existing live/UAT check; where to save results. For interactions, name the effective backend, disposable data/account, downstream effects, and cleanup. Report unrun checks as unrun.
+**Evidence:** Choose the relevant static checks, runtime interactions or artifact comparisons, and any existing live/UAT check. Say where to save the results. Before interactions, identify the backend actually in use, disposable data and accounts, downstream effects, and cleanup. Say which checks weren't run.
 
-**Authority:** Continue within this request's authorization and repository rules. State permitted reads, edits, commands, and environments where useful. Identify actions needing separate authorization, such as deployment or external messages. Ask only when a missing decision or boundary blocks the next action.
+**Authority:** Work within the request's authorization and repository rules. Specify permitted reads, edits, commands, and environments where that helps. Name actions that need separate authorization, such as deployment or external messages. Ask when a missing decision or unclear boundary prevents the next action.
 
-**Budget, when needed:** Time, usage/spend, and retry limits; what stops at the limit; expiry of any temporary increase.
+**Budget, when needed:** Set time, usage or spend, and retry limits. Say what stops when a limit is reached and when any temporary increase expires.
 
-**Recovery:** How to undo or contain a failed change.
+**Recovery:** How will you undo or contain a failed change?
 
-**Completion:** Reviewable diff or artifact, actual verification results, remaining limits, and next step.
+**Completion:** Provide the diff or artifact for review, actual verification results, remaining limits, and the next step.
 
-Delete fields that add no value. For an example, see [worked tasks](../examples/worked-task.md).
+Delete fields you don't need. See the [worked task](../examples/worked-task.md) for an example.

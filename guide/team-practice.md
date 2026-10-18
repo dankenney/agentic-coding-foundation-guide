@@ -1,14 +1,14 @@
 # Working as a team
 
-**Use when:** an agent-assisted result will be used or maintained by someone else. Shared work needs clear ownership, inspectable evidence, and a project another person can continue.
+When someone else will use or maintain the result, they need to know who owns it, what was checked, and how to continue the work. Agree on those expectations before the handoff.
 
-## Agree a small working contract
+## Agree how the team will work
 
-Decide where the current task lives, which repository instructions are canonical, how changes are reviewed, what may touch production, and who owns the result. Make important boundaries concrete: approved data, permitted services, deployment authority, and recovery responsibility. Follow your workplace's tool and data policies.
+Agree where to track the task, which repository instructions everyone follows, how to review changes, and who owns the result. Be explicit about approved data and services, who may change production, and who handles recovery. Your workplace's tool and data policies still apply.
 
-Do not make one person maintain duplicate instruction manuals for every tool. Keep a concise canonical contract; use small platform entry files where needed and verify that the agent reads the intended source. Review changes to those files as carefully as changes to code, because they alter future behavior.
+Keep the shared instructions in one concise, canonical file. Where a tool needs its own entry file, point it to that source and verify that the agent reads it. Maintaining a separate manual for every tool creates work and invites conflicting instructions. Review instruction changes as carefully as code changes: they affect what agents do on later tasks.
 
-## Give each role a useful job
+## Assign responsibilities
 
 | Role | Responsibility | Evidence it should produce |
 | --- | --- | --- |
@@ -17,26 +17,26 @@ Do not make one person maintain duplicate instruction manuals for every tool. Ke
 | Reviewer/verifier | Challenge the result against the criteria | Specific findings and independently observed behavior |
 | Integrator | Resolve interfaces and verify the combined change | A working combined revision |
 
-People and agents can share these roles. One person may hold several on a small task. Assigning a reviewer does not remove the task owner's responsibility to judge the evidence.
+People and agents can share these roles, and one person may hold several on a small task. The task owner still needs to judge the evidence, even when a reviewer has already looked at it.
 
-For parallel work, define file or module ownership and shared contracts first. Integrate a small change early to expose mismatched assumptions. Tests that pass in separate branches do not prove the combined result. Keep the combined revision recoverable and check it again.
+Before splitting work, agree who owns each file or module and how the parts will fit together. Integrate a small change early so you can catch conflicting assumptions. Then check the combined revision and keep a way to recover it; passing tests on separate branches won't tell you whether the pieces work together.
 
-## Review the result people will receive
+## Review what people will actually receive
 
-Review the requested behavior alongside the changed implementation and the observed result. Include the artifact/revision, how to run it, checks performed, known limits, and the decision needed. Name what remains uncertain and what would resolve it.
+Compare what was requested with the changed implementation and the result you can observe. Give the reviewer the artifact or revision, instructions to run it, checks performed, known limits, and any decision you need from them. If something remains uncertain, say what would resolve it.
 
-For UI work, include a clear view of the changed flow and the relevant error or empty state. For exported files or reports, open the actual delivered file. For permissions or migrations, involve someone who can assess the affected contract and recovery plan. Keep real user data out of screenshots and fixtures.
+For UI work, show the changed flow and the relevant error or empty state. Open exported files and reports in the form you'll deliver them. For permissions or migrations, involve someone who can assess what's changing and whether the recovery plan covers it. Use test data in screenshots and fixtures.
 
-## Ship the smallest useful slice
+## Release and follow through
 
-Before a shared release, identify its audience, environment, validation, owner, and recovery path. Verify the intended deployed version with safe test data. Keep development configuration separate from production. After release, watch the signals relevant to the change: errors, failed jobs, broken flows, or user feedback. A prototype becomes a maintained tool when someone owns its ongoing operation.
+Before a shared release, confirm who will use it, where it will run, how it was checked, who owns it, and how to recover. Verify the intended deployed version with safe test data, and keep development configuration separate from production. After release, watch for the errors, failed jobs, broken flows, or user feedback relevant to the change. If people will depend on a prototype, assign someone to maintain it.
 
-At a meaningful pause, leave a [handoff](../templates/handoff.md). It should answer “what can I do next?” without replaying a chat. Record a lasting design choice only when its rationale helps future work; do not generate logs for their own sake.
+Leave a [handoff](../templates/handoff.md) when someone else needs to pick up the work. They should be able to find their next action without reading the chat. Record a lasting design choice when its rationale will help them; skip the session log if it adds nothing useful.
 
-## Measure what improves work
+## Check whether the workflow helps
 
-Choose a few comparable tasks and record time to an accepted result, review/rework effort, escaped failures, and whether the output solved the intended problem. Include human and agent costs. Compare like tasks and note changed scope. Do not use generated lines, commits, or guessed hours saved as a productivity score.
+Choose a few comparable tasks and record how long it takes to reach an accepted result, the effort spent on review and rework, failures found after release, and whether the output solved the intended problem. Include human and agent costs, and note any change in scope. Generated lines, commit counts, and guessed hours saved won't tell you whether the work improved.
 
-Research is a reason to measure locally, not to promise a multiplier. The [DORA 2025 report abstract](https://research.google/pubs/dora-2025-state-of-ai-assisted-software-development-report/) describes organizational strengths and weaknesses being amplified; it does not establish a causal effect for your team. METR's [February 2026 experiment update](https://metr.org/blog/2026-02-24-uplift-update/) explains selection and time-measurement problems. Its [May 2026 survey](https://metr.org/blog/2026-05-11-ai-usage-survey/) distinguishes perceived speed from value and warns about self-report bias. None supplies a dependable forecast for a particular workflow.
+Published research can help you decide what to measure, but it can't forecast the benefit for your team. The [DORA 2025 report abstract](https://research.google/pubs/dora-2025-state-of-ai-assisted-software-development-report/) describes organizational strengths and weaknesses being amplified; it doesn't establish a causal effect for your team. METR's [February 2026 experiment update](https://metr.org/blog/2026-02-24-uplift-update/) explains problems with selection and time measurement. Its [May 2026 survey](https://metr.org/blog/2026-05-11-ai-usage-survey/) distinguishes perceived speed from value and warns about self-report bias. Measure your own workflow before promising an improvement.
 
-Use a short weekly conversation to select one improvement: a clearer brief, a failing check, an unnecessary instruction to remove, or a workflow worth repeating. Capture the best lesson with evidence and limits. The [maintenance process](../maintenance/README.md) keeps that learning selective.
+In a short weekly conversation, choose one improvement to try. It might be a clearer brief, a check that catches a missed failure, an instruction you can remove, or a workflow worth repeating. Keep the lessons that help, along with their evidence and limits, using the [maintenance process](../maintenance/README.md).

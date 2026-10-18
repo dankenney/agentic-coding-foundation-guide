@@ -1,6 +1,6 @@
 # Project instruction starter
 
-Use the instruction filename and scope supported by your agent. `AGENTS.md` is one option; check your platform's current discovery and inheritance rules in [platforms](../guide/platforms.md). This template is reference material, not active instructions for a nested directory.
+Choose an instruction filename and scope your agent supports. `AGENTS.md` is one option; check the current discovery and inheritance rules in [platform notes](../guide/platforms.md). Copy the template into your project when you're ready to use it. It doesn't govern work in this guide's template directory.
 
 ```markdown
 # Project instructions
@@ -25,4 +25,4 @@ If behavior fails: reproduce, fix stability, rerun the original check.
 Report actual results and checks not run.
 ```
 
-Keep only useful, maintained rules. Link detailed reference material. Put task progress in a brief or [handoff](handoff.md), and explain significant choices in a decision record. Confirm commands against the repository before adopting this file.
+Keep the rules you can maintain and link to detailed reference material when needed. Use a brief or [handoff](handoff.md) for task progress and a decision record for significant choices. Check the commands against the repository before adopting the file.

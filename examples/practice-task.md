@@ -1,18 +1,18 @@
-# A first task with everything supplied
+# Practice task: convert a report to CSV
 
-**Use when:** you have a coding agent but no project yet. Build a small report-to-CSV converter in a new empty folder outside this guide. The inputs are made up and the result has a precise check. Fetch the linked exercise files first; the program and checks then run offline without connected accounts.
+If you have a coding agent but no project yet, try this small report-to-CSV converter. Work in a new empty folder outside the guide. The reports are made up, and the expected CSV files give you a way to check the result. Fetch the linked exercise files first; after that, the program and checks run offline without connected accounts.
 
-Your tool needs to create files and run a program, or a teammate can run it with you. Ask the agent to check which language is already available before choosing one. A chat-only tool can help with the [short CSV walkthrough](worked-task.md#document-to-csv-verify-each-extracted-value) and task brief; call that preparation, not a completed build.
+You'll need a tool that can create files and run a program, or a teammate who can run it with you. Ask the agent which language is already available before choosing one. With a chat-only tool, use the [short CSV walkthrough](worked-task.md#document-to-csv-verify-each-extracted-value) to prepare the brief and compare rows. You won't have built or run a converter yet.
 
 ## The job
 
-A two-page report lists request counts by region. Turn it into a CSV that another person can use without guessing where the numbers came from.
+A two-page report lists request counts by region. Convert it to CSV and keep each count's printed page number so someone can check it against the source.
 
 - [Original report](fixtures/report.txt) → [expected CSV](fixtures/report-expected.csv)
 - [Revised report](fixtures/report-revised.txt) → [expected revised CSV](fixtures/report-revised-expected.csv)
 - [Ambiguous report](fixtures/report-ambiguous.txt) → fail clearly; do not create an output
 
-The contract is deliberately small: columns `region,request_count,source_page`, one row per region, in report order. `source_page` is the printed page marker in the input, not a line number. Counts are integers; `not reported` becomes an empty field. A repeated region is ambiguous and must produce an error. Never invent a count or reuse a previous result.
+Use the columns `region,request_count,source_page`, with one row per region in report order. `source_page` is the printed page marker in the input, not a line number. Counts are integers; use an empty field for `not reported`. If a region appears twice, the input is ambiguous and the program must return an error. Don't invent a count or reuse a previous result.
 
 ## Give the agent this task
 
@@ -33,7 +33,7 @@ Compare the actual CSV values against the independent expected files.
 Show exact commands, actual results, and any checks you could not run.
 ```
 
-Replace the folder placeholder before sending. The exercise folder does not need its own Git repository; keep the inputs unchanged and save outputs under new names. If no language can run there, use the walkthrough or choose an approved environment before treating the task as executable. Explain a setup gap before proposing installations or a subscription.
+Replace the folder placeholder before sending the request. You don't need to set up Git for this exercise. Keep the inputs unchanged and use a new output name for each run. If no language can run in the folder, use the walkthrough or choose an approved environment first. Ask the agent to explain the setup gap before proposing installations or a subscription.
 
 ## Inspect the result yourself
 
@@ -42,6 +42,6 @@ Replace the folder placeholder before sending. The exercise folder does not need
 3. Run the ambiguous input to a new output path: a nonzero exit and a clear duplicate-region error; no output file exists.
 4. Rerun against an existing output: a nonzero exit and the previous file is unchanged.
 
-Compare parsed CSV fields and row order, allowing normal platform differences in line endings. Ask the agent which code preserves page provenance and rejects ambiguity. Change one valid count in a **copy** of the source, predict the output, and check it again. Expected files are independent checks; changing them to match incorrect output does not fix the converter.
+Compare parsed CSV fields and row order, allowing for normal differences in line endings across platforms. Ask the agent to show you the code that preserves printed page numbers and rejects duplicate regions. Then change one valid count in a **copy** of the source, predict the output, and run it again. Keep the expected files unchanged so they can check the converter independently.
 
-**Done means:** a real program ran, the delivered files match both valid cases, invalid/rerun behavior is demonstrated, and you can repeat one check. Save the run command and any limits in a short [handoff](../templates/handoff.md). Continue with [the working loop](../guide/workflow.md) when you have a task from your own work.
+You've finished when the program has run, both valid outputs match, you've checked invalid input and rerun behavior, and you can repeat a check yourself. Save the run command and any limits in a short [handoff](../templates/handoff.md). When you're ready to try a task from your own work, use [the working loop](../guide/workflow.md).
