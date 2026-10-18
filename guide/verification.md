@@ -37,6 +37,8 @@ Derive expected results from the requirements and controlled inputs. A test that
 
 A screenshot establishes appearance at one moment. A recording helps explain sequence. Assertions establish the specific conditions you wrote. Use the combination that answers the acceptance criteria. Check keyboard interaction and the relevant narrow-screen layout when the change affects them; do not mistake a desktop screenshot for complete UI coverage.
 
+After correctness checks, review the result as its intended user. Can they find the next action, understand the result, and recover without your explanation? If you find friction, fix the most consequential issue within scope and walk the flow again.
+
 ## For files, data, and generated artifacts
 
 Open the final artifact from its delivered path. Confirm it exists, is the expected version, and contains the requested content. For a CSV, check row counts, column names, representative values, encoding, missing values, and totals against a controlled input. For a document or slide deck, render and inspect it as a reader will see it. Recalculate deterministic numbers and verify citations against the exact source.

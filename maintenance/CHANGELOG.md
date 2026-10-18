@@ -35,3 +35,8 @@
 
 - Tightened explanations of delegation, review, verification, and added capability while preserving the guide's structure and technical requirements.
 - Added an optional generic natural writing editor for maintainers, with safeguards for citations, qualifications, code, and navigation.
+
+## 2026-10-18 — Easier entry and experience review
+
+- Moved the agent starter ahead of chapter choices and replaced the navigation table with links that wrap on narrow screens.
+- Wrapped the starter prompt into short lines and added a small experience-quality check after correctness checks.
