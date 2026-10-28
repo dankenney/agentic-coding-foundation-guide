@@ -1,5 +1,10 @@
 # Guide changes
 
+## 2026-10-28: Worked skill example
+
+- Added a UX lens skill for business-app screens and flows. It has brief, review and walk modes, a section for audit-grade apps, and a stated scope. It's linked from Advanced practice and the agent index.
+- Its checks are recommendations built on well-known usability heuristics, not proven rules. The 400 ms acknowledgment target is a recommended threshold.
+
 ## 2026-10-17: Initial public field guide
 
 - Added guidance from a first useful task through ongoing team use.

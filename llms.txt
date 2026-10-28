@@ -14,6 +14,7 @@
 - [Recovery](guide/recovery.md): Diagnose a failure, restore the right state, and resume.
 - [Team practice](guide/team-practice.md): Agree who owns the work and how to review it.
 - [Advanced practice](guide/advanced.md): Choose skills, tools, parallel work, or automation for a specific need.
+- [UX lens skill](examples/skills/ux-lens/SKILL.md): A worked review skill for business-app screens and flows.
 - [Platform notes](guide/platforms.md): Check documented differences between tools.
 - [Worked task](examples/worked-task.md): Read made-up workplace examples with briefs and checks.
 - [Templates](templates/README.md): Copy the parts of a brief, handoff, or lesson that help with the task.

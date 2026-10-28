@@ -21,6 +21,8 @@ A skill needs to say when to use it, what it produces, and what supporting mater
 
 Try the procedure on a normal case, an edge case, and a case where it should decline or ask for missing information. Read the output and inspect its actions; successful invocation alone tells you little. A single preference usually needs a sentence in your instructions rather than its own skill.
 
+For a worked example, see the [UX lens skill](../examples/skills/ux-lens/SKILL.md). It reviews business-app screens and flows in three modes (brief, review and walk). It says what it won't review (code and back ends), and it adds a section for apps whose figures get audited. It was tried on a normal screen review, a single read-only screenshot with missing states, and a request to review a function's performance. The second case added its "not seen" verdict, and the third added its scope section.
+
 ## Connect a service for a specific task
 
 Before connecting a service, describe the work it will handle and the data and actions it needs. Read access may be enough to test the idea. Inspect tool definitions, dependencies, and supporting scripts before enabling a new package. Give credentials only the permissions required, and keep them out of tracked examples.
